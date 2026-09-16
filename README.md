@@ -8,8 +8,9 @@
 
 ## 🌟 Điểm nổi bật & Tính năng cốt lõi
 
-1. **📖 Sách giáo khoa Điện tử Màn hình Máy tính (`/sgk/bai-01.html`)**:
+1. **📖 Sách giáo khoa Điện tử Màn hình Máy tính (`/sgk/bai-01.html`, `/sgk/bai-02.html`)**:
    - Tối ưu chuyên biệt cho trải nghiệm đọc trên màn hình máy vi tính trường học.
+   - Cắt và nhúng đầy đủ 100% các hình ảnh, sơ đồ, biểu đồ Ven, trục số thực tế từ bản scan PDF gốc của Bộ GD&ĐT (`/sgk/images/`).
    - Thanh mục lục bên trái bám dính (sticky TOC) cuộn tự động theo vị trí đọc.
    - Tùy biến nhanh cỡ chữ (A- / 100% / A+) và 3 chủ đề đọc (Tối, Giấy cổ, Sáng).
    - Tích hợp bài tập SGK có nút xem hướng dẫn giải ẩn/hiện thông minh.
