@@ -112,28 +112,38 @@ export default function HomeClient({
           )}
         </header>
 
-        {/* NÚT TRUY CẬP NHANH: SGK ĐIỆN TỬ BÀI 1 & ÔN TẬP ĐỊNH KỲ */}
+        {/* NÚT TRUY CẬP NHANH: SGK ĐIỆN TỬ BÀI 1 & 2 VÀ ÔN TẬP ĐỊNH KỲ */}
         <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {/* Card SGK Điện tử */}
-          <Link
-            href="/luyen/bai-01?tab=sgk"
-            className="flex flex-col justify-between rounded-3xl border-2 border-sea/40 bg-gradient-to-br from-sea/[0.15] via-void-card to-sea/[0.05] p-5 shadow-card transition hover:-translate-y-1 hover:border-sea hover:shadow-card-hover cursor-pointer"
-          >
+          {/* Card SGK Điện tử — 2 Bài đã có đầy đủ */}
+          <div className="flex flex-col justify-between rounded-3xl border-2 border-sea/40 bg-gradient-to-br from-sea/[0.15] via-void-card to-sea/[0.05] p-5 shadow-card">
             <div>
               <span className="rounded-full bg-sea/20 px-3 py-1 font-mono text-xs font-bold text-sea-deep">
                 📖 Trực quan trên máy vi tính
               </span>
               <h2 className="mt-2.5 font-display text-xl font-bold text-star">
-                Sách giáo khoa Điện tử — Bài 1: Mệnh đề
+                Sách giáo khoa Điện tử
               </h2>
               <p className="mt-1 text-xs text-star-soft leading-relaxed">
                 Mục lục bám dính thông minh, phóng to thu nhỏ chữ (A-/A+), chế độ đọc đêm/giấy cổ và ẩn/hiện lời giải bài tập SGK.
               </p>
             </div>
-            <span className="mt-4 inline-flex items-center font-display text-xs font-bold text-sea-deep">
-              Mở sách giáo khoa đọc ngay →
-            </span>
-          </Link>
+            <div className="mt-3 flex flex-col gap-2">
+              <Link
+                href="/luyen/bai-01?tab=sgk"
+                className="flex items-center justify-between rounded-xl border border-sea/30 bg-sea/10 px-3 py-2 text-xs font-bold text-sea-deep hover:bg-sea/20 transition"
+              >
+                <span>📐 Bài 1: Mệnh đề</span>
+                <span>Đọc SGK →</span>
+              </Link>
+              <Link
+                href="/luyen/bai-02?tab=sgk"
+                className="flex items-center justify-between rounded-xl border border-sea/30 bg-sea/10 px-3 py-2 text-xs font-bold text-sea-deep hover:bg-sea/20 transition"
+              >
+                <span>📦 Bài 2: Tập hợp & Phép toán</span>
+                <span>Đọc SGK →</span>
+              </Link>
+            </div>
+          </div>
 
           {/* Card Ôn tập Kiểm tra Định kỳ */}
           <Link
@@ -260,14 +270,14 @@ export default function HomeClient({
                 {topic.lessons.map((lesson) => {
                   const lessonScore = progress[lesson.id]?.best;
                   const lessonCount = counts[lesson.id];
-                  const isBai1 = lesson.id === "bai-01";
+                  const isFullLesson = lesson.id === "bai-01" || lesson.id === "bai-02";
 
                   return (
                     <Link
                       key={lesson.id}
                       href={`/luyen/${lesson.id}`}
                       className={`group flex flex-col justify-between rounded-2xl border p-4 transition-all hover:-translate-y-0.5 shadow-sm ${
-                        isBai1
+                        isFullLesson
                           ? "border-sea/50 bg-gradient-to-br from-sea/[0.15] to-void-card ring-1 ring-sea/40"
                           : "border-star/10 bg-void-card hover:border-sea/40 hover:bg-void-light"
                       }`}
@@ -280,7 +290,7 @@ export default function HomeClient({
                           {lessonScore !== undefined && (
                             <ScoreBadge best={lessonScore} />
                           )}
-                          {isBai1 && (
+                          {isFullLesson && (
                             <span className="rounded-full bg-sea px-2 py-0.5 font-mono text-[10px] font-bold text-white uppercase tracking-wider">
                               SGK Điện tử + 5 Phân hệ
                             </span>
@@ -300,7 +310,7 @@ export default function HomeClient({
 
                       <div className="mt-3 flex items-center justify-between border-t border-white/5 pt-2.5 text-xs text-star-soft">
                         <span className="flex items-center gap-1 font-mono">
-                          {isBai1 ? (
+                          {isFullLesson ? (
                             "📖 SGK · 💡 Lý thuyết · 🎯 15 câu · ⚖️ Đ/S"
                           ) : (
                             <span>{lessonCount ? `${lessonCount.mcq} câu trắc nghiệm` : "Xem bài học"}</span>

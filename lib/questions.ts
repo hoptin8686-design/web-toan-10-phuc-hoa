@@ -1,8 +1,10 @@
 import type { Question } from "./types";
 import { questions as bai01 } from "@/data/questions/bai-01";
+import { questions as bai02 } from "@/data/questions/bai-02";
 
 export const QUESTION_BANK: Record<string, Question[]> = {
   "bai-01": bai01,
+  "bai-02": bai02,
 };
 
 export function getQuestions(lessonId: string): Question[] {
