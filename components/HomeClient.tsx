@@ -270,7 +270,7 @@ export default function HomeClient({
                 {topic.lessons.map((lesson) => {
                   const lessonScore = progress[lesson.id]?.best;
                   const lessonCount = counts[lesson.id];
-                  const isFullLesson = lesson.id === "bai-01" || lesson.id === "bai-02";
+                  const isFullLesson = true; // All lessons now have content
 
                   return (
                     <Link
@@ -292,7 +292,7 @@ export default function HomeClient({
                           )}
                           {isFullLesson && (
                             <span className="rounded-full bg-sea px-2 py-0.5 font-mono text-[10px] font-bold text-white uppercase tracking-wider">
-                              SGK Điện tử + 5 Phân hệ
+                              {lesson.id === "bai-01" || lesson.id === "bai-02" ? "SGK Điện tử + 5 Phân hệ" : "Đầy đủ 4 Phân hệ luyện tập"}
                             </span>
                           )}
                         </div>
@@ -311,7 +311,9 @@ export default function HomeClient({
                       <div className="mt-3 flex items-center justify-between border-t border-white/5 pt-2.5 text-xs text-star-soft">
                         <span className="flex items-center gap-1 font-mono">
                           {isFullLesson ? (
-                            "📖 SGK · 💡 Lý thuyết · 🎯 15 câu · ⚖️ Đ/S"
+                            lesson.id === "bai-01" || lesson.id === "bai-02" 
+                              ? "📖 SGK · 💡 Lý thuyết · 🎯 15 câu · ⚖️ Đ/S" 
+                              : "💡 Lý thuyết · 🎯 15 câu · ⚖️ Đ/S · 📝 Tự luận"
                           ) : (
                             <span>{lessonCount ? `${lessonCount.mcq} câu trắc nghiệm` : "Xem bài học"}</span>
                           )}
