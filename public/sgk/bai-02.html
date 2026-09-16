@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SGK Điện tử Toán 10 — Bài 2: Tập hợp và các phép toán trên tập hợp</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: rgba(19, 26, 42, 0.85);
+      --card-border: rgba(99, 130, 190, 0.18);
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-glow: rgba(56, 189, 248, 0.2);
+      --coral: #f43f5e;
+      --leaf: #10b981;
+      --gold: #f59e0b;
+      --sidebar-w: 300px;
+      --font-scale: 16px;
+    }
+
+    body.theme-light {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --card-border: #e2e8f0;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --accent: #0284c7;
+      --accent-glow: rgba(2, 132, 199, 0.15);
+    }
+
+    body.theme-sepia {
+      --bg: #fbf7ee;
+      --card-bg: #f4ede0;
+      --card-border: #e3d5be;
+      --text: #423528;
+      --text-muted: #796652;
+      --accent: #c2691e;
+      --accent-glow: rgba(194, 105, 30, 0.15);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-size: var(--font-scale);
+      line-height: 1.75;
+      overflow-x: hidden;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    /* Layout for Desktop Screen */
+    .sgk-wrapper {
+      display: flex;
+      min-height: 100vh;
+      max-width: 1560px;
+      margin: 0 auto;
+    }
+
+    /* Left Sticky Sidebar (Desktop TOC) */
+    .sgk-sidebar {
+      width: var(--sidebar-w);
+      height: 100vh;
+      position: sticky;
+      top: 0;
+      padding: 24px 18px;
+      border-right: 1px solid var(--card-border);
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      z-index: 20;
+    }
+
+    .book-meta {
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--card-border);
+      margin-bottom: 16px;
+    }
+    .book-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    .book-title {
+      font-family: 'Baloo 2', cursive;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .toc-title {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .toc-list {
+      list-style: none;
+      overflow-y: auto;
+      flex: 1;
+      padding-right: 4px;
+    }
+    .toc-list::-webkit-scrollbar {
+      width: 4px;
+    }
+    .toc-list::-webkit-scrollbar-thumb {
+      background: var(--card-border);
+      border-radius: 4px;
+    }
+
+    .toc-item a {
+      display: block;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 13px;
+      padding: 6px 10px;
+      border-radius: 8px;
+      margin-bottom: 2px;
+      transition: all 0.15s ease;
+      line-height: 1.4;
+    }
+    .toc-item a:hover {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text);
+    }
+    .toc-item.active a {
+      background: var(--accent-glow);
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .toc-sub {
+      padding-left: 14px;
+      margin: 2px 0 4px;
+    }
+    .toc-sub a {
+      font-size: 12px;
+      opacity: 0.85;
+    }
+
+    /* Screen Reader Controls */
+    .screen-controls {
+      padding-top: 14px;
+      border-top: 1px solid var(--card-border);
+      margin-top: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .control-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+    .btn-group {
+      display: flex;
+      gap: 4px;
+    }
+    .btn-mini {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      color: var(--text);
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .btn-mini:hover {
+      background: var(--accent-glow);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* Main Content Area */
+    .sgk-main {
+      flex: 1;
+      padding: 36px 48px 80px;
+      max-width: 980px;
+      min-width: 0;
+    }
+
+    .sgk-header {
+      margin-bottom: 36px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--card-border);
+    }
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+    .lesson-tag {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 8px;
+    }
+    .lesson-title {
+      font-family: 'Baloo 2', cursive;
+      font-size: 34px;
+      font-weight: 800;
+      line-height: 1.25;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+    body.theme-light .lesson-title {
+      color: #0f172a;
+    }
+    body.theme-sepia .lesson-title {
+      color: #423528;
+    }
+
+    .lesson-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    .meta-chip {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--card-border);
+      border-radius: 999px;
+      padding: 4px 12px;
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+
+    /* Objective Box */
+    .objective-box {
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.08), rgba(99, 102, 241, 0.06));
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 14px;
+      padding: 22px 24px;
+      margin-bottom: 32px;
+    }
+    .obj-title {
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--accent);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .obj-list {
+      padding-left: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 14.5px;
+    }
+
+    /* Section Styles */
+    .sgk-section {
+      margin-bottom: 48px;
+      scroll-margin-top: 30px;
+    }
+    .section-heading {
+      font-family: 'Baloo 2', cursive;
+      font-size: 24px;
+      font-weight: 800;
+      margin: 32px 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--accent);
+    }
+    .section-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: var(--accent);
+      color: #090d16;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    h3.sub-heading {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 24px 0 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    p {
+      margin-bottom: 14px;
+      text-align: justify;
+    }
+
+    /* Definition & Formula Box */
+    .math-box {
+      background: var(--card-bg);
+      border-left: 4px solid var(--accent);
+      border-top: 1px solid var(--card-border);
+      border-right: 1px solid var(--card-border);
+      border-bottom: 1px solid var(--card-border);
+      border-radius: 0 12px 12px 0;
+      padding: 18px 22px;
+      margin: 22px 0;
+    }
+    .math-box.highlight {
+      border-left-color: var(--gold);
+      background: rgba(245, 158, 11, 0.06);
+    }
+    .math-box-title {
+      font-weight: 700;
+      font-size: 15px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .math-formula {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 15px;
+      font-weight: 600;
+      background: rgba(0, 0, 0, 0.28);
+      padding: 10px 14px;
+      border-radius: 8px;
+      margin: 10px 0;
+      display: block;
+      overflow-x: auto;
+      color: #38bdf8;
+    }
+    body.theme-light .math-formula {
+      background: #f1f5f9;
+      color: #0284c7;
+    }
+
+    /* Activity Box (HĐ, Luyện tập, Vận dụng) */
+    .activity-box {
+      border: 1px dashed var(--card-border);
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.02);
+    }
+    .activity-label {
+      font-weight: 700;
+      font-size: 13.5px;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Example Box */
+    .example-box {
+      background: rgba(16, 185, 129, 0.06);
+      border-left: 4px solid var(--leaf);
+      border-radius: 0 10px 10px 0;
+      padding: 16px 20px;
+      margin: 18px 0;
+      border-top: 1px solid var(--card-border);
+      border-right: 1px solid var(--card-border);
+      border-bottom: 1px solid var(--card-border);
+    }
+    .example-title {
+      font-weight: 700;
+      color: var(--leaf);
+      margin-bottom: 6px;
+    }
+    .example-solution {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px dashed rgba(16, 185, 129, 0.3);
+      font-size: 14.5px;
+    }
+    .sol-tag {
+      font-weight: 600;
+      color: var(--leaf);
+    }
+
+    /* Embedded Textbook Figures */
+    .sgk-figure {
+      margin: 24px 0;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 16px;
+      overflow: hidden;
+    }
+    .sgk-figure img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: inline-block;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.28);
+      background: #ffffff;
+    }
+    .sgk-figure figcaption {
+      margin-top: 10px;
+      font-size: 13.5px;
+      font-style: italic;
+      color: var(--text-muted);
+    }
+    .sgk-figure-row {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 22px 0;
+    }
+    .sgk-figure-row .sgk-figure {
+      margin: 0;
+      flex: 1;
+      min-width: 240px;
+    }
+
+    /* Interactive Solution Dropdown */
+    details.exercise-hint {
+      margin-top: 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 10px 14px;
+    }
+    details.exercise-hint summary {
+      font-weight: 600;
+      color: var(--accent);
+      cursor: pointer;
+      user-select: none;
+    }
+    details.exercise-hint[open] summary {
+      margin-bottom: 8px;
+    }
+    .hint-content {
+      font-size: 14.5px;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* Footer Navigation */
+    .sgk-footer {
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid var(--card-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .btn-nav {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .btn-nav:hover {
+      border-color: var(--accent);
+      background: var(--accent-glow);
+      color: var(--accent);
+    }
+    .btn-nav.primary {
+      background: linear-gradient(135deg, #0284c7, #38bdf8);
+      color: #090d16;
+      border: none;
+      font-weight: 700;
+    }
+    .btn-nav.primary:hover {
+      box-shadow: 0 0 18px rgba(56, 189, 248, 0.4);
+    }
+
+    @media (max-width: 900px) {
+      .sgk-sidebar {
+        display: none;
+      }
+      .sgk-main {
+        padding: 24px 20px;
+      }
+    }
+  </style>
+</head>
+<body class="theme-dark">
+
+<div class="sgk-wrapper">
+  <!-- LEFT DESKTOP SIDEBAR -->
+  <aside class="sgk-sidebar">
+    <div class="book-meta">
+      <span class="book-badge">SGK Điện tử</span>
+      <div class="book-title">Toán 10 — Tập 1</div>
+      <div style="font-size: 12px; color: var(--text-muted); margin-top: 3px;">Kết nối tri thức với cuộc sống</div>
+    </div>
+
+    <div class="toc-title">Mục lục bài học</div>
+    <ul class="toc-list" id="tocList">
+      <li class="toc-item active"><a href="#muc-tieu">🎯 Mục tiêu cần đạt</a></li>
+      <li class="toc-item"><a href="#khoi-dong">🚀 Khởi động (CLB Lịch sử)</a></li>
+      <li class="toc-item">
+        <a href="#phan-1">1. Các khái niệm cơ bản</a>
+        <div class="toc-sub">
+          <div><a href="#phan-1a">• a. Tập hợp & Tập rỗng</a></div>
+          <div><a href="#phan-1b">• b. Tập hợp con</a></div>
+          <div><a href="#phan-1c">• c. Hai tập bằng nhau</a></div>
+        </div>
+      </li>
+      <li class="toc-item">
+        <a href="#phan-2">2. Các tập hợp số</a>
+        <div class="toc-sub">
+          <div><a href="#phan-2a">• a. Mối quan hệ các tập số</a></div>
+          <div><a href="#phan-2b">• b. Khoảng, đoạn, nửa khoảng</a></div>
+        </div>
+      </li>
+      <li class="toc-item">
+        <a href="#phan-3">3. Các phép toán trên tập hợp</a>
+        <div class="toc-sub">
+          <div><a href="#phan-3a">• a. Giao hai tập hợp (∩)</a></div>
+          <div><a href="#phan-3b">• b. Hợp hai tập hợp (∪)</a></div>
+          <div><a href="#phan-3c">• c. Hiệu (\) & Phần bù (C)</a></div>
+        </div>
+      </li>
+      <li class="toc-item"><a href="#van-dung">⚽ Vận dụng toán thực tế</a></li>
+      <li class="toc-item"><a href="#bai-tap">📝 Bài tập SGK (1.8 - 1.16)</a></li>
+    </ul>
+
+    <div class="screen-controls">
+      <div class="control-row">
+        <span>Cỡ chữ:</span>
+        <div class="btn-group">
+          <button class="btn-mini" onclick="adjustFont(-1)" title="Giảm cỡ chữ">A-</button>
+          <button class="btn-mini" onclick="resetFont()" title="Cỡ mặc định">100%</button>
+          <button class="btn-mini" onclick="adjustFont(1)" title="Tăng cỡ chữ">A+</button>
+        </div>
+      </div>
+      <div class="control-row">
+        <span>Giao diện đọc:</span>
+        <div class="btn-group">
+          <button class="btn-mini" onclick="setTheme('theme-dark')" title="Chế độ Tối">🌙 Tối</button>
+          <button class="btn-mini" onclick="setTheme('theme-sepia')" title="Chế độ Giấy">📜 Giấy</button>
+          <button class="btn-mini" onclick="setTheme('theme-light')" title="Chế độ Sáng">☀️ Sáng</button>
+        </div>
+      </div>
+      <div style="font-size: 11px; color: var(--text-muted); text-align: center; margin-top: 4px;">
+        🏫 THPT Phục Hòa — Tổ Tự nhiên
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN READING CANVAS -->
+  <main class="sgk-main">
+    <div class="sgk-header">
+      <div class="breadcrumb">
+        <span>Toán học 10</span>
+        <span>›</span>
+        <span>Chương I. Mệnh đề và tập hợp</span>
+        <span>›</span>
+        <span style="color: var(--text);">Bài 2</span>
+      </div>
+      <div class="lesson-tag">📖 Chương I • Trang 12 - 19 SGK</div>
+      <h1 class="lesson-title">BÀI 2. TẬP HỢP VÀ CÁC PHÉP TOÁN TRÊN TẬP HỢP</h1>
+      <div class="lesson-meta-bar">
+        <div class="meta-chip">⏱ Thời lượng: 3 tiết</div>
+        <div class="meta-chip">🎯 Biểu đồ Ven & Trục số thực</div>
+        <div class="meta-chip">💡 Giao, Hợp, Hiệu, Phần bù</div>
+      </div>
+    </div>
+
+    <!-- MỤC TIÊU CẦN ĐẠT -->
+    <div class="objective-box" id="muc-tieu">
+      <div class="obj-title">🎯 Học xong bài này, em sẽ:</div>
+      <ul class="obj-list">
+        <li>Nhận biết các khái niệm cơ bản về tập hợp: phần tử, tập con, hai tập hợp bằng nhau, tập rỗng (∅).</li>
+        <li>Biểu diễn các tập con thường dùng của tập số thực ℝ (khoảng, đoạn, nửa khoảng) trên trục số.</li>
+        <li>Thực hiện thành thạo các phép toán trên tập hợp: giao (∩), hợp (∪), hiệu (\), phần bù (C).</li>
+        <li>Sử dụng thành thạo biểu đồ Ven để giải các bài toán thực tế đếm số lượng phần tử.</li>
+      </ul>
+    </div>
+
+    <!-- KHỞI ĐỘNG -->
+    <div class="sgk-section" id="khoi-dong">
+      <h2 class="section-heading"><span class="section-num">🚀</span> Khởi động</h2>
+      <p>Câu lạc bộ Lịch sử có 12 thành viên (không có hai bạn nào trùng tên), tổ chức hai chuyên đề trên một phần mềm họp trực tuyến. Tên các thành viên tham gia mỗi chuyên đề được hiển thị trên màn hình (H.1.1):</p>
+      
+      <figure class="sgk-figure">
+        <img src="/sgk/images/bai2_h1_1_hai_chuyen_de.png" alt="Hình 1.1: Thành viên hai chuyên đề CLB Lịch sử" style="max-width: 680px;" />
+        <figcaption>Hình 1.1: Danh sách thành viên tham gia Chuyên đề 1 và Chuyên đề 2 (SGK Trang 12)</figcaption>
+      </figure>
+
+      <p><strong>Câu hỏi đặt ra:</strong> Có bao nhiêu thành viên vắng mặt trong cả hai chuyên đề nhỉ?</p>
+      <p>Bài học này sẽ giúp em trả lời câu hỏi trên bằng kiến thức cơ bản về tập hợp và các phép toán trên tập hợp.</p>
+    </div>
+
+    <!-- PHẦN 1: CÁC KHÁI NIỆM CƠ BẢN VỀ TẬP HỢP -->
+    <div class="sgk-section" id="phan-1">
+      <h2 class="section-heading"><span class="section-num">1</span> Các khái niệm cơ bản về tập hợp</h2>
+
+      <!-- 1a. Tập hợp -->
+      <div id="phan-1a">
+        <h3 class="sub-heading">a. Tập hợp</h3>
+        <div class="activity-box">
+          <div class="activity-label">HĐ1 (SGK Trang 12)</div>
+          <p>Trong tình huống trên, gọi A là tập hợp những thành viên tham gia Chuyên đề 1, B là tập hợp những thành viên tham gia Chuyên đề 2.</p>
+          <p>a) Nam có là một phần tử của tập hợp A không? Ngân có là một phần tử của tập hợp B không?</p>
+          <p>b) Hãy chỉ ra tính chất đặc trưng cho các phần tử của tập hợp C gồm 7 châu lục trên Trái Đất.</p>
+        </div>
+
+        <div class="math-box">
+          <div class="math-box-title">📌 Cách mô tả một tập hợp</div>
+          <p>Có thể mô tả một tập hợp bằng một trong hai cách sau:</p>
+          <p>• <strong>Cách 1:</strong> Liệt kê các phần tử của tập hợp: $A = \{a; b; c; ...\}$</p>
+          <p>• <strong>Cách 2:</strong> Chỉ ra tính chất đặc trưng cho các phần tử của tập hợp: $A = \{x \in X \mid P(x)\}$</p>
+          <div style="font-size: 13.5px; color: var(--text-muted); margin-top: 8px;">
+            Kí hiệu: $a \in S$ (phần tử a thuộc tập hợp S); $a \notin S$ (phần tử a không thuộc tập hợp S). Số phần tử của S được kí hiệu là $n(S)$.
+          </div>
+        </div>
+
+        <figure class="sgk-figure" style="max-width: 580px; margin: 20px auto;">
+          <img src="/sgk/images/bai2_tap_rong.png" alt="Hai bạn học sinh đối thoại về tập rỗng x^2 + 1 = 0" />
+          <figcaption>Thảo luận về tập rỗng: Phương trình x² + 1 = 0 không có nghiệm thực nào (SGK Trang 13)</figcaption>
+        </figure>
+
+        <div class="math-box highlight">
+          <div class="math-box-title">📌 Tập hợp rỗng (∅)</div>
+          <p>Tập hợp không chứa phần tử nào được gọi là <strong>tập rỗng</strong>, kí hiệu là <strong>∅</strong>.</p>
+          <p style="margin-bottom:0;">Ví dụ: Tập nghiệm thực của phương trình $x^2 + 1 = 0$ là tập rỗng: $S = \emptyset$.</p>
+        </div>
+      </div>
+
+      <!-- 1b. Tập con -->
+      <div id="phan-1b" style="margin-top: 28px;">
+        <h3 class="sub-heading">b. Tập hợp con</h3>
+        <div class="math-box">
+          <div class="math-box-title">📌 Định nghĩa Tập hợp con</div>
+          <p>Nếu mọi phần tử của tập hợp T đều là phần tử của tập hợp S thì ta nói <strong>T là một tập hợp con (tập con) của S</strong> và viết là <strong>T ⊂ S</strong> (đọc là T chứa trong S hoặc T là tập con của S).</p>
+          <span class="math-formula">T ⊂ S ⟺ (∀x, x ∈ T ⇒ x ∈ S)</span>
+          <p style="margin-bottom:0;">• Quy ước: <strong>Tập rỗng là tập con của mọi tập hợp</strong>: $\emptyset \subset S$ với mọi S.</p>
+        </div>
+
+        <p>Người ta thường minh hoạ một tập hợp bằng một hình phẳng được bao quanh bởi một đường kín, gọi là <strong>biểu đồ Ven</strong>.</p>
+
+        <div class="sgk-figure-row">
+          <figure class="sgk-figure">
+            <img src="/sgk/images/bai2_h1_2_tap_ven.png" alt="Hình 1.2: Biểu đồ Ven tập hợp S" style="max-width: 170px;" />
+            <figcaption>Hình 1.2: Biểu diễn tập S bằng đường kín</figcaption>
+          </figure>
+          <figure class="sgk-figure">
+            <img src="/sgk/images/bai2_h1_3_tap_con.png" alt="Hình 1.3: Minh họa T là tập con của S" style="max-width: 200px;" />
+            <figcaption>Hình 1.3: T nằm trọn trong S (T ⊂ S)</figcaption>
+          </figure>
+        </div>
+
+        <div class="example-box">
+          <div class="example-title">Ví dụ 2 (SGK Trang 14)</div>
+          <p>Cho tập hợp $S = \{2; 3; 5\}$. Những tập hợp nào sau đây là tập con của S?</p>
+          <p style="font-family: 'JetBrains Mono', monospace; margin: 6px 0;">S₁ = {3}; &nbsp;&nbsp; S₂ = {0; 2}; &nbsp;&nbsp; S₃ = {3; 5}</p>
+          
+          <figure class="sgk-figure" style="max-width: 600px; margin: 12px auto;">
+            <img src="/sgk/images/bai2_h1_4_vi_du_2.png" alt="Hình 1.4: Ba biểu đồ Ven minh họa S1, S2, S3 trong Ví dụ 2" />
+            <figcaption>Hình 1.4: Biểu diễn trực quan S₁, S₂, S₃ trên biểu đồ Ven (Trang 14 SGK)</figcaption>
+          </figure>
+
+          <div class="example-solution">
+            <span class="sol-tag">Lời giải:</span>
+            <p>• $S_1 \subset S$ và $S_3 \subset S$ vì mọi phần tử của chúng đều thuộc S.</p>
+            <p style="margin-bottom:0;">• $S_2 \not\subset S$ vì phần tử $0 \in S_2$ nhưng $0 \notin S$.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 1c. Hai tập bằng nhau -->
+      <div id="phan-1c" style="margin-top: 28px;">
+        <h3 class="sub-heading">c. Hai tập hợp bằng nhau</h3>
+        
+        <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
+          <div class="math-box" style="flex: 1; min-width: 280px; margin: 10px 0;">
+            <div class="math-box-title">📌 Khái niệm</div>
+            <p>Hai tập hợp S và T được gọi là <strong>bằng nhau</strong> nếu mỗi phần tử của T cũng là phần tử của tập hợp S và ngược lại. Kí hiệu là <strong>S = T</strong>.</p>
+            <span class="math-formula">S = T ⟺ (S ⊂ T và T ⊂ S)</span>
+          </div>
+
+          <figure class="sgk-figure" style="max-width: 200px; margin: 0 auto;">
+            <img src="/sgk/images/bai2_robot_bang_nhau.png" alt="Robot gợi ý hai tập hợp bằng nhau" />
+            <figcaption>Robot nhắc nhở: S ⊂ T và T ⊂ S ⇒ S = T</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHẦN 2: CÁC TẬP HỢP SỐ -->
+    <div class="sgk-section" id="phan-2">
+      <h2 class="section-heading"><span class="section-num">2</span> Các tập hợp số</h2>
+
+      <!-- 2a. Mối quan hệ -->
+      <div id="phan-2a">
+        <h3 class="sub-heading">a. Mối quan hệ giữa các tập hợp số</h3>
+        <p>Các tập hợp số đã học ở cấp Trung học cơ sở:</p>
+        <ul style="padding-left: 20px; margin-bottom: 14px;">
+          <li><strong>ℕ:</strong> Tập hợp các số tự nhiên: $\mathbb{N} = \{0; 1; 2; 3; 4; ...\}$.</li>
+          <li><strong>ℤ:</strong> Tập hợp các số nguyên gồm tự nhiên và nguyên âm: $\mathbb{Z} = \{...; -2; -1; 0; 1; 2; ...\}$.</li>
+          <li><strong>ℚ:</strong> Tập hợp các số hữu tỉ gồm các số viết được dưới dạng phân số $\frac{a}{b}$ ($a, b \in \mathbb{Z}, b \neq 0$).</li>
+          <li><strong>ℝ:</strong> Tập hợp các số thực gồm các số hữu tỉ và các số vô tỉ.</li>
+        </ul>
+
+        <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
+          <div class="math-box highlight" style="flex: 1; min-width: 280px;">
+            <div class="math-box-title">📌 Mối quan hệ bao hàm</div>
+            <p style="font-size: 16px; font-weight: 700; color: var(--gold); margin: 6px 0;">ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ</p>
+            <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom:0;">Mọi số tự nhiên đều là số nguyên, mọi số nguyên đều là số hữu tỉ, và mọi số hữu tỉ đều là số thực.</p>
+          </div>
+
+          <figure class="sgk-figure" style="max-width: 280px; margin: 0 auto;">
+            <img src="/sgk/images/bai2_h1_5_venn_so.png" alt="Hình 1.5: Biểu đồ Ven mối quan hệ các tập hợp số" />
+            <figcaption>Hình 1.5: Biểu đồ Ven các tập hợp số N ⊂ Z ⊂ Q ⊂ R</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- 2b. Các tập con của R -->
+      <div id="phan-2b" style="margin-top: 28px;">
+        <h3 class="sub-heading">b. Một số tập con thường dùng của tập số thực ℝ</h3>
+        <p>Trên trục số, ta có các tập hợp con đặc biệt được biểu diễn bằng các khoảng, đoạn, nửa khoảng (phần không thuộc tập hợp sẽ bị gạch bỏ):</p>
+
+        <figure class="sgk-figure">
+          <img src="/sgk/images/bai2_cac_khoang_doan.png" alt="Bảng biểu diễn các khoảng, đoạn, nửa khoảng trên trục số" style="max-width: 720px;" />
+          <figcaption>Bảng các tập con thường dùng của ℝ và hình vẽ biểu diễn trên trục số (SGK Trang 16)</figcaption>
+        </figure>
+
+        <div class="example-box">
+          <div class="example-title">Ví dụ 5 (SGK Trang 16)</div>
+          <p>Viết các tập hợp sau dưới dạng các khoảng, đoạn, nửa khoảng trong ℝ rồi biểu diễn trên trục số:</p>
+          <p>• $C = \{x \in \mathbb{R} \mid 2 \le x \le 7\}$</p>
+          <p>• $D = \{x \in \mathbb{R} \mid x &lt; 2\}$</p>
+
+          <figure class="sgk-figure" style="max-width: 380px; margin: 12px auto;">
+            <img src="/sgk/images/bai2_truc_so_vi_du_5.png" alt="Biểu diễn trục số Ví dụ 5" />
+            <figcaption>Biểu diễn trục số đoạn C = [2; 7] và khoảng D = (-∞; 2)</figcaption>
+          </figure>
+
+          <div class="example-solution">
+            <span class="sol-tag">Lời giải:</span>
+            <p>• Tập hợp C là đoạn: <strong>$C = [2; 7]$</strong>.</p>
+            <p style="margin-bottom:0;">• Tập hợp D là khoảng: <strong>$D = (-\infty; 2)$</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHẦN 3: CÁC PHÉP TOÁN TRÊN TẬP HỢP -->
+    <div class="sgk-section" id="phan-3">
+      <h2 class="section-heading"><span class="section-num">3</span> Các phép toán trên tập hợp</h2>
+
+      <!-- 3a. Giao -->
+      <div id="phan-3a">
+        <h3 class="sub-heading">a. Giao của hai tập hợp (∩)</h3>
+        
+        <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
+          <div class="math-box" style="flex: 1; min-width: 280px;">
+            <div class="math-box-title">📌 Định nghĩa Phép Giao</div>
+            <p>Tập hợp gồm các phần tử <strong>thuộc cả hai</strong> tập hợp S và T gọi là <strong>giao</strong> của hai tập hợp S và T, kí hiệu là <strong>S ∩ T</strong>.</p>
+            <span class="math-formula">S ∩ T = {x | x ∈ S và x ∈ T}</span>
+          </div>
+
+          <figure class="sgk-figure" style="max-width: 220px; margin: 0 auto;">
+            <img src="/sgk/images/bai2_h1_6_giao.png" alt="Hình 1.6: Biểu đồ Ven giao S giao T" />
+            <figcaption>Hình 1.6: Giao S ∩ T (phần màu đỏ)</figcaption>
+          </figure>
+        </div>
+
+        <div class="example-box">
+          <div class="example-title">Ví dụ 6b: Giao hai khoảng trên trục số (SGK Trang 17)</div>
+          <p>Cho hai tập hợp $E = [1; +\infty)$ và $F = (-\infty; 3]$. Hãy xác định tập hợp $E \cap F$.</p>
+          
+          <figure class="sgk-figure">
+            <img src="/sgk/images/bai2_truc_so_giao.png" alt="Biểu diễn phép giao hai khoảng trên trục số" style="max-width: 650px;" />
+            <figcaption>Giao của E = [1; +∞) và F = (-∞; 3] là đoạn [1; 3] trên trục số</figcaption>
+          </figure>
+
+          <div class="example-solution">
+            <span class="sol-tag">Kết quả:</span>
+            <p style="margin-bottom:0;">Giao của hai tập hợp là: <strong>$[1; +\infty) \cap (-\infty; 3] = [1; 3]$</strong>.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3b. Hợp -->
+      <div id="phan-3b" style="margin-top: 32px;">
+        <h3 class="sub-heading">b. Hợp của hai tập hợp (∪)</h3>
+        
+        <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
+          <div class="math-box" style="flex: 1; min-width: 280px;">
+            <div class="math-box-title">📌 Định nghĩa Phép Hợp</div>
+            <p>Tập hợp gồm các phần tử <strong>thuộc tập hợp S hoặc thuộc tập hợp T</strong> gọi là <strong>hợp</strong> của hai tập hợp S và T, kí hiệu là <strong>S ∪ T</strong>.</p>
+            <span class="math-formula">S ∪ T = {x | x ∈ S hoặc x ∈ T}</span>
+          </div>
+
+          <figure class="sgk-figure" style="max-width: 220px; margin: 0 auto;">
+            <img src="/sgk/images/bai2_h1_7_hop.png" alt="Hình 1.7: Biểu đồ Ven hợp S hợp T" />
+            <figcaption>Hình 1.7: Hợp S ∪ T (phần màu xanh lá)</figcaption>
+          </figure>
+        </div>
+
+        <div class="example-box">
+          <div class="example-title">Ví dụ 7a (SGK Trang 17)</div>
+          <p>Cho hai tập hợp: $C = \{2; 3; 4; 7\}$ và $D = \{-1; 2; 3; 4; 6\}$. Hãy xác định tập hợp $C \cup D$.</p>
+          
+          <figure class="sgk-figure" style="max-width: 280px; margin: 12px auto;">
+            <img src="/sgk/images/bai2_h1_8_ven_cd.png" alt="Hình 1.8: Biểu đồ Ven hợp C hợp D" />
+            <figcaption>Hình 1.8: Hợp hai tập hợp C ∪ D</figcaption>
+          </figure>
+
+          <div class="example-solution">
+            <span class="sol-tag">Lời giải:</span>
+            <p style="margin-bottom:0;">$C \cup D = \{-1; 2; 3; 4; 6; 7\}$.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3c. Hiệu và phần bù -->
+      <div id="phan-3c" style="margin-top: 32px;">
+        <h3 class="sub-heading">c. Hiệu và phần bù của hai tập hợp</h3>
+        
+        <div class="math-box">
+          <div class="math-box-title">📌 Hiệu của hai tập hợp (\)</div>
+          <p>Hiệu của hai tập hợp S và T là tập hợp gồm các phần tử <strong>thuộc S nhưng không thuộc T</strong>, kí hiệu là <strong>S \ T</strong>.</p>
+          <span class="math-formula">S \ T = {x | x ∈ S và x ∉ T}</span>
+        </div>
+
+        <div class="math-box highlight">
+          <div class="math-box-title">📌 Phần bù của một tập con (C)</div>
+          <p>Nếu <strong>T ⊂ S</strong> thì $S \setminus T$ được gọi là <strong>phần bù của T trong S</strong>, kí hiệu là <strong>$C_S T$</strong>.</p>
+          <span class="math-formula">C_S T = S \ T &nbsp;&nbsp; (khi T ⊂ S)</span>
+          <p style="font-size: 13px; color: var(--text-muted); margin-bottom:0;">Chú ý: Phần bù của S trong chính nó là tập rỗng: $C_S S = \emptyset$.</p>
+        </div>
+
+        <div class="sgk-figure-row">
+          <figure class="sgk-figure">
+            <img src="/sgk/images/bai2_h1_9_hieu.png" alt="Hình 1.9: Biểu đồ Ven hiệu S trừ T" style="max-width: 230px;" />
+            <figcaption>Hình 1.9: Hiệu S \ T (phần màu xanh dương)</figcaption>
+          </figure>
+          <figure class="sgk-figure">
+            <img src="/sgk/images/bai2_h1_10_phan_bu.png" alt="Hình 1.10: Biểu đồ Ven phần bù C_S T" style="max-width: 210px;" />
+            <figcaption>Hình 1.10: Phần bù C_S T khi T ⊂ S</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <!-- VẬN DỤNG THỰC TẾ -->
+    <div class="sgk-section" id="van-dung">
+      <h2 class="section-heading"><span class="section-num">⚽</span> Vận dụng toán thực tế</h2>
+      
+      <div class="activity-box">
+        <div class="activity-label">Vận dụng (SGK Trang 18)</div>
+        <p>Lớp 10A có 24 bạn tham gia thi đấu bóng đá và cầu lông, trong đó có 16 bạn thi đấu bóng đá và 11 bạn thi đấu cầu lông. Giả sử các trận bóng đá và cầu lông không tổ chức đồng thời. Hỏi có bao nhiêu bạn lớp 10A tham gia thi đấu <strong>cả bóng đá và cầu lông</strong>?</p>
+      </div>
+
+      <figure class="sgk-figure">
+        <img src="/sgk/images/bai2_van_dung_bong_da.png" alt="Biểu đồ Ven bóng đá và cầu lông" style="max-width: 680px;" />
+        <figcaption>Biểu đồ Ven bài toán thực tế và công thức cơ bản: n(A ∪ B) = n(A) + n(B) - n(A ∩ B)</figcaption>
+      </figure>
+
+      <div class="example-box">
+        <div class="example-title">Hướng dẫn giải chi tiết</div>
+        <div class="example-solution" style="border-top: none; padding-top: 0;">
+          <p>Gọi A là tập hợp các bạn tham gia bóng đá: $n(A) = 16$.</p>
+          <p>Gọi B là tập hợp các bạn tham gia cầu lông: $n(B) = 11$.</p>
+          <p>Tổng số bạn tham gia ít nhất một môn là $n(A \cup B) = 24$.</p>
+          <p>Gọi x là số bạn tham gia cả hai môn ($x = n(A \cap B)$). Áp dụng công thức:</p>
+          <span class="math-formula">n(A ∪ B) = n(A) + n(B) - n(A ∩ B)</span>
+          <p>Thay số vào: $24 = 16 + 11 - x \iff 24 = 27 - x \iff x = 3$.</p>
+          <p style="margin-bottom:0;"><strong>Đáp số:</strong> Có <strong>3 bạn</strong> lớp 10A tham gia thi đấu cả bóng đá và cầu lông.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- BÀI TẬP SGK -->
+    <div class="sgk-section" id="bai-tap">
+      <h2 class="section-heading"><span class="section-num">📝</span> Bài tập sách giáo khoa (Trang 19)</h2>
+
+      <!-- Bài 1.8 -->
+      <div class="activity-box">
+        <p><strong>Bài 1.8:</strong> Gọi X là tập hợp các quốc gia tiếp giáp với Việt Nam trên đất liền. Hãy liệt kê các phần tử của tập hợp X và biểu diễn tập X bằng biểu đồ Ven.</p>
+        <details class="exercise-hint">
+          <summary>Xem lời giải Bài 1.8</summary>
+          <div class="hint-content">
+            <p>Các quốc gia có chung đường biên giới trên đất liền với Việt Nam gồm: Trung Quốc, Lào, Cam-pu-chia.</p>
+            <p>Ta có: <strong>$X = \{\text{Trung Quốc}; \text{Lào}; \text{Cam-pu-chia}\}$</strong>.</p>
+            <p>Biểu diễn bằng biểu đồ Ven: Vẽ một đường tròn khép kín, bên trong ghi tên 3 quốc gia này.</p>
+          </div>
+        </details>
+      </div>
+
+      <!-- Bài 1.10 -->
+      <div class="activity-box">
+        <p><strong>Bài 1.10:</strong> Hãy viết tập hợp sau bằng cách nêu tính chất đặc trưng cho các phần tử của tập hợp: $A = \{0; 4; 8; 12; 16\}$.</p>
+        <details class="exercise-hint">
+          <summary>Xem lời giải Bài 1.10</summary>
+          <div class="hint-content">
+            <p>Các phần tử trong A đều là các số tự nhiên chia hết cho 4 và nhỏ hơn hoặc bằng 16.</p>
+            <p>Cách viết đặc trưng: <strong>$A = \{n \in \mathbb{N} \mid n \;\vdots\; 4 \text{ và } n \le 16\}$</strong> hoặc <strong>$A = \{4k \mid k \in \mathbb{N}, 0 \le k \le 4\}$</strong>.</p>
+          </div>
+        </details>
+      </div>
+
+      <!-- Bài 1.11 -->
+      <div class="activity-box">
+        <p><strong>Bài 1.11:</strong> Trong các tập hợp sau, tập nào là tập rỗng?</p>
+        <p>• $A = \{x \in \mathbb{R} \mid x^2 - 6 = 0\}$</p>
+        <p>• $B = \{x \in \mathbb{Z} \mid x^2 - 6 = 0\}$</p>
+        <details class="exercise-hint">
+          <summary>Xem lời giải Bài 1.11</summary>
+          <div class="hint-content">
+            <p>Phương trình $x^2 - 6 = 0 \iff x = \pm\sqrt{6}$.</p>
+            <p>• Vì $\pm\sqrt{6} \in \mathbb{R}$ nên $A = \{-\sqrt{6}; \sqrt{6}\} \neq \emptyset$.</p>
+            <p>• Vì $\pm\sqrt{6} \notin \mathbb{Z}$ nên phương trình không có nghiệm nguyên nào. Vậy <strong>$B = \emptyset$</strong> (B là tập rỗng).</p>
+          </div>
+        </details>
+      </div>
+
+      <!-- Bài 1.14 -->
+      <div class="activity-box">
+        <p><strong>Bài 1.14:</strong> Cho $A = \{x \in \mathbb{Z} \mid |x| &lt; 4\}$; $B = \{x \in \mathbb{Z} \mid (5x - 3x^2)(x^2 + 2x - 3) = 0\}$.</p>
+        <p>a) Liệt kê các phần tử của hai tập hợp A và B.</p>
+        <p>b) Hãy xác định các tập hợp $A \cap B$, $A \cup B$ và $A \setminus B$.</p>
+        <details class="exercise-hint">
+          <summary>Xem lời giải Bài 1.14</summary>
+          <div class="hint-content">
+            <p><strong>a) Liệt kê phần tử:</strong></p>
+            <p>• $|x| &lt; 4 \iff -4 &lt; x &lt; 4$. Vì $x \in \mathbb{Z}$ nên: $A = \{-3; -2; -1; 0; 1; 2; 3\}$.</p>
+            <p>• Phương trình $(5x - 3x^2)(x^2 + 2x - 3) = 0 \iff x(5 - 3x) = 0$ hoặc $x^2 + 2x - 3 = 0$.</p>
+            <p>Giải ra các nghiệm: $x = 0$, $x = 5/3$ (loại vì không nguyên), $x = 1$, $x = -3$. Do đó: $B = \{-3; 0; 1\}$.</p>
+            <p><strong>b) Các phép toán:</strong></p>
+            <p>• Giao: <strong>$A \cap B = \{-3; 0; 1\}$</strong> (chính là B, vì $B \subset A$).</p>
+            <p>• Hợp: <strong>$A \cup B = A = \{-3; -2; -1; 0; 1; 2; 3\}$</strong>.</p>
+            <p>• Hiệu: <strong>$A \setminus B = \{-2; -1; 2; 3\}$</strong>.</p>
+          </div>
+        </details>
+      </div>
+
+      <!-- Bài 1.15 -->
+      <div class="activity-box">
+        <p><strong>Bài 1.15:</strong> Xác định các tập hợp sau và biểu diễn chúng trên trục số:</p>
+        <p>a) $(-4; 1] \cap [0; 3)$</p>
+        <p>b) $(0; 2] \cup (-3; 1]$</p>
+        <p>c) $(-2; 1] \cap (1; +\infty)$</p>
+        <p>d) $\mathbb{R} \setminus (-\infty; 3]$</p>
+        <details class="exercise-hint">
+          <summary>Xem lời giải Bài 1.15</summary>
+          <div class="hint-content">
+            <p>a) $(-4; 1] \cap [0; 3) = <strong>[0; 1]</strong>.</p>
+            <p>b) $(0; 2] \cup (-3; 1] = <strong>(-3; 2]</strong>.</p>
+            <p>c) $(-2; 1] \cap (1; +\infty) = <strong>\emptyset</strong> (không có phần tử chung nào).</p>
+            <p>d) $\mathbb{R} \setminus (-\infty; 3] = <strong>(3; +\infty)</strong>.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- FOOTER NAV -->
+    <div class="sgk-footer">
+      <a href="/sgk/bai-01.html" class="btn-nav">
+        <span>←</span> SGK Bài 1: Mệnh đề
+      </a>
+      <a href="/luyen/bai-02" class="btn-nav">
+        Về Luyện tập Bài 2
+      </a>
+      <a href="/luyen/bai-02?tab=quiz" class="btn-nav primary">
+        Làm Trắc nghiệm Bài 2 (15 câu) <span>🚀</span>
+      </a>
+    </div>
+  </main>
+</div>
+
+<script>
+  let currentScale = 16;
+  function adjustFont(delta) {
+    currentScale = Math.max(13, Math.min(24, currentScale + delta));
+    document.documentElement.style.setProperty('--font-scale', currentScale + 'px');
+  }
+  function resetFont() {
+    currentScale = 16;
+    document.documentElement.style.setProperty('--font-scale', '16px');
+  }
+
+  function setTheme(themeName) {
+    document.body.classList.remove('theme-dark', 'theme-light', 'theme-sepia');
+    document.body.classList.add(themeName);
+  }
+
+  // Active TOC highlight on scroll
+  const sections = document.querySelectorAll('.sgk-section, .objective-box');
+  const tocLinks = document.querySelectorAll('.toc-item a, .toc-sub a');
+
+  window.addEventListener('scroll', () => {
+    let currentId = '';
+    const scrollPos = window.scrollY + 120;
+    sections.forEach(sec => {
+      const top = sec.offsetTop;
+      const height = sec.offsetHeight;
+      if (scrollPos >= top && scrollPos < top + height) {
+        currentId = sec.getAttribute('id');
+      }
+    });
+
+    if (currentId) {
+      document.querySelectorAll('.toc-item').forEach(item => item.classList.remove('active'));
+      const activeLink = document.querySelector(`.toc-list a[href="#${currentId}"]`);
+      if (activeLink) {
+        const parentItem = activeLink.closest('.toc-item');
+        if (parentItem) parentItem.classList.add('active');
+      }
+    }
+  });
+</script>
+
+</body>
+</html>

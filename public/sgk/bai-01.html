@@ -516,6 +516,44 @@
       box-shadow: 0 0 18px rgba(56, 189, 248, 0.4);
     }
 
+    /* Embedded Textbook Figures */
+    .sgk-figure {
+      margin: 22px 0;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 16px;
+      overflow: hidden;
+    }
+    .sgk-figure img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: inline-block;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.28);
+      background: #ffffff;
+    }
+    .sgk-figure figcaption {
+      margin-top: 10px;
+      font-size: 13.5px;
+      font-style: italic;
+      color: var(--text-muted);
+    }
+    .sgk-figure-row {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+    .sgk-figure-row .sgk-figure {
+      margin: 0;
+      flex: 1;
+      min-width: 260px;
+    }
+
     @media (max-width: 900px) {
       .sgk-sidebar {
         display: none;
@@ -615,6 +653,11 @@
         <p style="margin-bottom:0;">• Bạn Dũng hỏi: <em>"Mấy giờ rồi các bạn?"</em></p>
       </div>
       <p>Trong các câu trên, câu của bạn An và bạn Bình có thể xác định rõ ràng là <strong>đúng</strong> hay <strong>sai</strong>. Nhưng câu của bạn Chi chỉ là cảm thán chủ quan, còn câu của bạn Dũng là một câu hỏi không khẳng định tính đúng sai. Trong Toán học, những khẳng định có tính đúng sai rõ ràng được gọi là <strong>mệnh đề</strong>.</p>
+
+      <figure class="sgk-figure">
+        <img src="/sgk/images/bai1_mo_dau_con_vat.png" alt="Khởi động Mệnh đề: Các bạn An và Khoa thảo luận về thế giới động vật" style="max-width: 680px;" />
+        <figcaption>Hình khởi động: Cuộc thảo luận giữa bạn Khoa và bạn An về các con vật trong tự nhiên (SGK Toán 10 — Trang 5)</figcaption>
+      </figure>
     </div>
 
     <!-- PHẦN 1: MỆNH ĐỀ -->
@@ -627,6 +670,11 @@
         <p>• Một mệnh đề không thể vừa đúng, vừa sai.</p>
         <p style="margin-bottom:0;">• Những câu cảm thán, câu hỏi, câu cầu khiến không phải là mệnh đề.</p>
       </div>
+
+      <figure class="sgk-figure" style="max-width: 420px; margin: 18px auto;">
+        <img src="/sgk/images/bai1_chu_robot_goi_y.png" alt="Chú robot lưu ý về mệnh đề toán học" />
+        <figcaption>Lưu ý của Robot: Mệnh đề trong toán học luôn có tính đúng / sai rõ ràng (Trang 6 SGK)</figcaption>
+      </figure>
 
       <div class="example-box">
         <div class="example-title">Ví dụ 1 (SGK Trang 6)</div>
@@ -660,6 +708,11 @@
         <p>• Nếu P đúng thì P̄ sai.</p>
         <p style="margin-bottom:0;">• Nếu P sai thì P̄ đúng.</p>
       </div>
+
+      <figure class="sgk-figure" style="max-width: 520px; margin: 20px auto;">
+        <img src="/sgk/images/bai1_bien_bao_nguoi_di_bo.png" alt="Biển báo người đi bộ qua đường và phủ định" />
+        <figcaption>Khoa và An quan sát biển báo giao thông: "Đây là biển báo người đi bộ qua đường" và câu phủ định của An (SGK Trang 7)</figcaption>
+      </figure>
 
       <div class="truth-table-wrap">
         <table class="truth-table">
@@ -740,6 +793,20 @@
         </table>
       </div>
 
+      <h3 class="sub-heading">Hình học & Điều kiện cần, điều kiện đủ</h3>
+      <p>Ví dụ minh họa tính kéo theo trong định lí hình học:</p>
+
+      <div class="sgk-figure-row">
+        <figure class="sgk-figure">
+          <img src="/sgk/images/bai1_tam_giac_vuong.png" alt="Tam giác vuông ABC tại A" style="max-width: 220px;" />
+          <figcaption>Tam giác ABC vuông tại A: BC² = AB² + AC² (Định lí Pythagore)</figcaption>
+        </figure>
+        <figure class="sgk-figure">
+          <img src="/sgk/images/bai1_tu_giac_noi_tiep.png" alt="Tứ giác ABCD nội tiếp đường tròn" style="max-width: 260px;" />
+          <figcaption>Tứ giác ABCD có tổng hai góc đối bằng 180° thì nội tiếp đường tròn</figcaption>
+        </figure>
+      </div>
+
       <h3 class="sub-heading">Điều kiện cần và Điều kiện đủ trong Toán học</h3>
       <p>Khi mệnh đề P ⇒ Q là một định lí toán học, ta nói:</p>
       <ul style="padding-left: 20px; margin-bottom: 14px;">
@@ -771,6 +838,11 @@
     <div class="sgk-section" id="phan-5">
       <h2 class="section-heading"><span class="section-num">5</span> Kí hiệu ∀ (với mọi) và ∃ (tồn tại)</h2>
       
+      <figure class="sgk-figure">
+        <img src="/sgk/images/bai1_bang_nhan_1.png" alt="Bảng nhân 1 và các phát biểu ∀, ∃" style="max-width: 600px;" />
+        <figcaption>Bảng nhân 1 và cuộc thảo luận giữa Khoa và An về các kí hiệu "Với mọi" (∀) và "Tồn tại" (∃) (SGK Trang 10)</figcaption>
+      </figure>
+
       <p>Trong toán học, để diễn đạt tính phổ quát hoặc sự tồn tại của các đối tượng, ta dùng hai kí hiệu đặc biệt:</p>
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0;">
         <div class="math-box" style="margin:0;">
@@ -784,6 +856,11 @@
           <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom:0;">Đúng khi chỉ ra được <em>ít nhất một</em> phần tử x₀ thuộc X làm cho P(x₀) đúng.</p>
         </div>
       </div>
+
+      <figure class="sgk-figure" style="max-width: 500px; margin: 20px auto;">
+        <img src="/sgk/images/bai1_venn_tap_so.png" alt="Biểu đồ Ven các tập hợp số N, Z, Q, R" />
+        <figcaption>Ôn tập các tập hợp số tự nhiên, nguyên, hữu tỉ và thực: ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ</figcaption>
+      </figure>
 
       <h3 class="sub-heading">Quy tắc phủ định mệnh đề chứa ∀ và ∃</h3>
       <div class="math-box highlight">
@@ -840,12 +917,26 @@
     <div class="did-you-know" id="em-co-biet">
       <div class="dyk-title">💡 Em có biết: Lịch sử logic toán học</div>
       <p>Logic học hình thức ra đời từ thời Hy Lạp cổ đại với triết gia vĩ đại <strong>Aristotle (384–322 TCN)</strong>, người đầu tiên hệ thống hóa các tam đoạn luận suy luận. Đến thế kỉ 19, nhà toán học người Anh <strong>George Boole (1815–1864)</strong> đã đại số hóa logic thành Đại số Boole (Boolean algebra), nền tảng cho toàn bộ mạch điện tử, máy tính và khoa học máy tính ngày nay.</p>
+
+      <div class="sgk-figure-row">
+        <figure class="sgk-figure">
+          <img src="/sgk/images/bai1_chan_dung_aristotle.png" alt="Chân dung Aristotle" style="max-width: 170px;" />
+          <figcaption><strong>Aristotle</strong> (384 – 322 TCN)<br>Triết gia Hy Lạp cổ đại</figcaption>
+        </figure>
+        <figure class="sgk-figure">
+          <img src="/sgk/images/bai1_chan_dung_george_boole.png" alt="Chân dung George Boole" style="max-width: 170px;" />
+          <figcaption><strong>George Boole</strong> (1815 – 1864)<br>Nhà toán học và logic học Anh</figcaption>
+        </figure>
+      </div>
     </div>
 
     <!-- FOOTER NAV -->
     <div class="sgk-footer">
       <a href="/luyen/bai-01" class="btn-nav">
-        <span>←</span> Về trang Luyện tập Bài 1
+        <span>←</span> Về Luyện tập Bài 1
+      </a>
+      <a href="/sgk/bai-02.html" class="btn-nav">
+        Sang SGK Bài 2: Tập hợp <span>→</span>
       </a>
       <a href="/luyen/bai-01?tab=quiz" class="btn-nav primary">
         Làm Trắc nghiệm 15 câu <span>🚀</span>
