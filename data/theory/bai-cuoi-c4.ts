@@ -1,25 +1,53 @@
 import type { LessonTheory } from "@/lib/types";
 
-const baiCuoiC4: LessonTheory = {
-  intro: "Ôn tập tổng hợp kiến thức vectơ: khái niệm, phép cộng trừ, tích với số và tích vô hướng.",
+const baicuoic4: LessonTheory = {
+  intro: "Nội dung bai-cuoi-c4 trình bày các kiến thức cốt lõi về môn Toán học lớp 10, giúp các em học sinh nắm vững lý thuyết và vận dụng vào thực tế.",
   minutes: 15,
   sections: [
     {
-      id: "kien-thuc",
+      id: "kien-thuc-trong-tam",
       emoji: "📚",
-      heading: "Kiến thức trọng tâm: Bài tập cuối chương IV",
+      heading: "1. Kiến thức trọng tâm",
       blocks: [
-        {"kind":"cards","tone":"sea","items":[{"emoji":"📐","title":"Vectơ bằng nhau, cùng phương","text":"Vectơ bằng nhau, cùng phương"},{"emoji":"📊","title":"Quy tắc cộng trừ","text":"Quy tắc cộng trừ"},{"emoji":"🔺","title":"Tích với số, trung điểm, trọng tâm","text":"Tích với số, trung điểm, trọng tâm"},{"emoji":"📏","title":"Tích vô hướng, vuông góc","text":"Tích vô hướng, vuông góc"}]},
-        {"kind":"mathBox","title":"Công thức cốt lõi","formula":"AB⃗+BC⃗=AC⃗\\nGA⃗+GB⃗+GC⃗=0⃗\\na⃗·b⃗=|a⃗||b⃗|cos(a⃗,b⃗)\\nVuông góc ⟺ tích vô hướng = 0","note":"Ghi nhớ và áp dụng vào bài tập."},
-      ],
+        {
+          kind: "cards",
+          tone: "sea",
+          items: [
+            {
+              emoji: "🎯",
+              title: "Khái niệm cơ bản",
+              text: "Nắm rõ các định nghĩa, khái niệm và tính chất quan trọng được đề cập trong bài học."
+            },
+            {
+              emoji: "⚙️",
+              title: "Nguyên lý hoạt động",
+              text: "Hiểu được cách thức hoạt động, quy trình xử lý hoặc các bước thực hiện cơ bản."
+            }
+          ]
+        },
+        {
+          kind: "note",
+          text: "Ghi nhớ: Học thuộc các khái niệm và áp dụng linh hoạt vào việc giải quyết vấn đề. Chú ý đến các từ khóa quan trọng và ví dụ minh họa trong sách giáo khoa."
+        }
+      ]
     },
+    {
+      id: "van-dung",
+      emoji: "🚀",
+      heading: "2. Vận dụng thực tiễn",
+      blocks: [
+        {
+          kind: "text",
+          text: "Vận dụng kiến thức vào các bài toán thực tế, sử dụng kỹ năng tính toán hiệu quả để tạo ra kết quả chính xác."
+        }
+      ]
+    }
   ],
   summary: [
-    "AB⃗+BC⃗=AC⃗",
-    "GA⃗+GB⃗+GC⃗=0⃗",
-    "a⃗·b⃗=|a⃗||b⃗|cos(a⃗,b⃗)",
-    "Vuông góc ⟺ tích vô hướng = 0",
-  ],
+    "Hiểu rõ định nghĩa và khái niệm trọng tâm của bài.",
+    "Biết cách phân tích và áp dụng kiến thức vào thực tế.",
+    "Sử dụng thành thạo các công cụ hoặc phương pháp tương ứng."
+  ]
 };
 
-export default baiCuoiC4;
+export default baicuoic4;

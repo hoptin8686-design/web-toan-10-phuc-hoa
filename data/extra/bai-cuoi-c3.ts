@@ -4,27 +4,41 @@ export const extra: LessonExtra = {
   tf: [
     {
       id: "tf-01",
-      context: "Ôn tập Chương III:",
+      context: "Xét tính Đúng / Sai của các phát biểu sau đây liên quan đến bài học:",
       statements: [
-          { text: "sin 90° = 1.", answer: true, explain: "Đúng." },
-          { text: "cos 180° = 1.", answer: false, explain: "cos 180° = -1. SAI." },
-          { text: "Tam giác có 3 cạnh 5, 12, 13 là tam giác vuông.", answer: true, explain: "5²+12²=13². ĐÚNG." },
-          { text: "Diện tích tam giác đều cạnh a bằng a²√3/2.", answer: false, explain: "S = a²√3/4. SAI." },
-      ],
-    },
+        {
+          text: "Nội dung bài học có ứng dụng quan trọng trong thực tiễn.",
+          answer: true,
+          explain: "Đúng, các kiến thức Toán học luôn gắn liền với ứng dụng thực tế."
+        },
+        {
+          text: "Chỉ cần học thuộc lòng, không cần thực hành tính toán.",
+          answer: false,
+          explain: "Sai, Toán học là môn học đòi hỏi kết hợp giữa lý thuyết và thực hành."
+        },
+        {
+          text: "Kiến thức bài này là nền tảng cho các phần tiếp theo.",
+          answer: true,
+          explain: "Đúng, các nội dung có sự liên kết logic với nhau."
+        },
+        {
+          text: "Việc sử dụng sai phương pháp có thể dẫn đến kết quả sai lệch.",
+          answer: true,
+          explain: "Đúng, tính chính xác là yêu cầu bắt buộc trong Toán học."
+        }
+      ]
+    }
   ],
   essay: [
     {
       id: "es-01",
-      q: "Cho tam giác ABC có b=10, c=6, A=120°. Tính a và diện tích S.",
-      math: "b=10, c=6, A=120°",
-      answer: "a² = 100+36-2(10)(6)cos120° = 136+60 = 196. a=14.\\nS = (1/2)(10)(6)sin120° = 30(√3/2) = 15√3.",
+      q: "Trình bày tóm tắt các khái niệm chính yếu yếu của bài học và nêu một ví dụ minh họa.",
+      answer: "Các khái niệm chính bao gồm: [Khái niệm 1], [Khái niệm 2]. \n\nVí dụ: Ứng dụng khái niệm này trong việc giải quyết một bài toán đơn giản."
     },
     {
       id: "es-02",
-      q: "Hai tòa nhà cách nhau khoảng cách cần tính. Từ điểm C nhìn hai chân tòa nhà A, B dưới góc 50°, CA=100m, CB=80m. Tính AB.",
-      math: "CA=100, CB=80, C=50°",
-      answer: "AB² = 100²+80²-2(100)(80)cos50° = 10000+6400-16000(0.643) = 16400-10288 = 6112.\\nAB ≈ 78.2 m.",
-    },
-  ],
+      q: "Phân tích một tình huống thực tế và đưa ra cách giải quyết bằng việc áp dụng kiến thức vừa học.",
+      answer: "Tình huống: [Mô tả tình huống]\n\nGiải quyết: Sử dụng công cụ/thuật toán được giới thiệu trong bài học để đưa ra phương án tối ưu nhất."
+    }
+  ]
 };

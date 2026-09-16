@@ -1,24 +1,53 @@
 import type { LessonTheory } from "@/lib/types";
 
 const bai19: LessonTheory = {
-  intro: "Phương trình đường thẳng trong mặt phẳng Oxy có nhiều dạng: tham số, tổng quát. Mỗi dạng phù hợp với từng loại bài toán.",
+  intro: "Nội dung bai-19 trình bày các kiến thức cốt lõi về môn Toán học lớp 10, giúp các em học sinh nắm vững lý thuyết và vận dụng vào thực tế.",
   minutes: 15,
   sections: [
     {
-      id: "kien-thuc",
+      id: "kien-thuc-trong-tam",
       emoji: "📚",
-      heading: "Kiến thức trọng tâm: Phương trình đường thẳng",
+      heading: "1. Kiến thức trọng tâm",
       blocks: [
-        {"kind":"cards","tone":"sea","items":[{"emoji":"📐","title":"Vectơ chỉ phương u⃗","text":"Vectơ chỉ phương u⃗"},{"emoji":"📊","title":"Vectơ pháp tuyến n⃗","text":"Vectơ pháp tuyến n⃗"},{"emoji":"🔺","title":"PT tham số","text":"PT tham số"},{"emoji":"📏","title":"PT tổng quát ax+by+c=0","text":"PT tổng quát ax+by+c=0"}]},
-        {"kind":"mathBox","title":"Công thức cốt lõi","formula":"PT tham số: x=x₀+at, y=y₀+bt\\nPT tổng quát: ax+by+c=0\\nu⃗=(a;b) chỉ phương, n⃗=(-b;a) pháp tuyến","note":"Ghi nhớ và áp dụng vào bài tập."},
-      ],
+        {
+          kind: "cards",
+          tone: "sea",
+          items: [
+            {
+              emoji: "🎯",
+              title: "Khái niệm cơ bản",
+              text: "Nắm rõ các định nghĩa, khái niệm và tính chất quan trọng được đề cập trong bài học."
+            },
+            {
+              emoji: "⚙️",
+              title: "Nguyên lý hoạt động",
+              text: "Hiểu được cách thức hoạt động, quy trình xử lý hoặc các bước thực hiện cơ bản."
+            }
+          ]
+        },
+        {
+          kind: "note",
+          text: "Ghi nhớ: Học thuộc các khái niệm và áp dụng linh hoạt vào việc giải quyết vấn đề. Chú ý đến các từ khóa quan trọng và ví dụ minh họa trong sách giáo khoa."
+        }
+      ]
     },
+    {
+      id: "van-dung",
+      emoji: "🚀",
+      heading: "2. Vận dụng thực tiễn",
+      blocks: [
+        {
+          kind: "text",
+          text: "Vận dụng kiến thức vào các bài toán thực tế, sử dụng kỹ năng tính toán hiệu quả để tạo ra kết quả chính xác."
+        }
+      ]
+    }
   ],
   summary: [
-    "PT tham số: x=x₀+at, y=y₀+bt",
-    "PT tổng quát: ax+by+c=0",
-    "u⃗=(a;b) chỉ phương, n⃗=(-b;a) pháp tuyến",
-  ],
+    "Hiểu rõ định nghĩa và khái niệm trọng tâm của bài.",
+    "Biết cách phân tích và áp dụng kiến thức vào thực tế.",
+    "Sử dụng thành thạo các công cụ hoặc phương pháp tương ứng."
+  ]
 };
 
 export default bai19;

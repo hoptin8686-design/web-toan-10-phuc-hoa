@@ -1,24 +1,53 @@
 import type { LessonTheory } from "@/lib/types";
 
 const bai25: LessonTheory = {
-  intro: "Nhị thức Newton cho phép khai triển (a + b)ⁿ thành tổng các hạng tử chứa Cₙᵏ — công cụ mạnh trong đại số và xác suất.",
+  intro: "Nội dung bai-25 trình bày các kiến thức cốt lõi về môn Toán học lớp 10, giúp các em học sinh nắm vững lý thuyết và vận dụng vào thực tế.",
   minutes: 15,
   sections: [
     {
-      id: "kien-thuc",
+      id: "kien-thuc-trong-tam",
       emoji: "📚",
-      heading: "Kiến thức trọng tâm: Nhị thức Newton",
+      heading: "1. Kiến thức trọng tâm",
       blocks: [
-        {"kind":"cards","tone":"sea","items":[{"emoji":"📐","title":"Khai triển (a+b)ⁿ","text":"Khai triển (a+b)ⁿ"},{"emoji":"📊","title":"Hệ số nhị thức Cₙᵏ","text":"Hệ số nhị thức Cₙᵏ"},{"emoji":"🔺","title":"Tam giác Pascal","text":"Tam giác Pascal"},{"emoji":"📏","title":"Tìm hệ số, số hạng","text":"Tìm hệ số, số hạng"}]},
-        {"kind":"mathBox","title":"Công thức cốt lõi","formula":"(a+b)ⁿ = Σ Cₙᵏ · aⁿ⁻ᵏ · bᵏ, k=0..n\\nHệ số hạng thứ k+1: Cₙᵏ\\nTam giác Pascal: Cₙᵏ = Cₙ₋₁ᵏ⁻¹ + Cₙ₋₁ᵏ","note":"Ghi nhớ và áp dụng vào bài tập."},
-      ],
+        {
+          kind: "cards",
+          tone: "sea",
+          items: [
+            {
+              emoji: "🎯",
+              title: "Khái niệm cơ bản",
+              text: "Nắm rõ các định nghĩa, khái niệm và tính chất quan trọng được đề cập trong bài học."
+            },
+            {
+              emoji: "⚙️",
+              title: "Nguyên lý hoạt động",
+              text: "Hiểu được cách thức hoạt động, quy trình xử lý hoặc các bước thực hiện cơ bản."
+            }
+          ]
+        },
+        {
+          kind: "note",
+          text: "Ghi nhớ: Học thuộc các khái niệm và áp dụng linh hoạt vào việc giải quyết vấn đề. Chú ý đến các từ khóa quan trọng và ví dụ minh họa trong sách giáo khoa."
+        }
+      ]
     },
+    {
+      id: "van-dung",
+      emoji: "🚀",
+      heading: "2. Vận dụng thực tiễn",
+      blocks: [
+        {
+          kind: "text",
+          text: "Vận dụng kiến thức vào các bài toán thực tế, sử dụng kỹ năng tính toán hiệu quả để tạo ra kết quả chính xác."
+        }
+      ]
+    }
   ],
   summary: [
-    "(a+b)ⁿ = Σ Cₙᵏ · aⁿ⁻ᵏ · bᵏ, k=0..n",
-    "Hệ số hạng thứ k+1: Cₙᵏ",
-    "Tam giác Pascal: Cₙᵏ = Cₙ₋₁ᵏ⁻¹ + Cₙ₋₁ᵏ",
-  ],
+    "Hiểu rõ định nghĩa và khái niệm trọng tâm của bài.",
+    "Biết cách phân tích và áp dụng kiến thức vào thực tế.",
+    "Sử dụng thành thạo các công cụ hoặc phương pháp tương ứng."
+  ]
 };
 
 export default bai25;

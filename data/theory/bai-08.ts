@@ -1,24 +1,53 @@
 import type { LessonTheory } from "@/lib/types";
 
 const bai08: LessonTheory = {
-  intro: "Phép cộng và trừ vectơ tuân theo các quy tắc hình học đặc biệt: quy tắc 3 điểm, quy tắc hình bình hành.",
+  intro: "Nội dung bai-08 trình bày các kiến thức cốt lõi về môn Toán học lớp 10, giúp các em học sinh nắm vững lý thuyết và vận dụng vào thực tế.",
   minutes: 15,
   sections: [
     {
-      id: "kien-thuc",
+      id: "kien-thuc-trong-tam",
       emoji: "📚",
-      heading: "Kiến thức trọng tâm: Tổng và hiệu của hai vectơ",
+      heading: "1. Kiến thức trọng tâm",
       blocks: [
-        {"kind":"cards","tone":"sea","items":[{"emoji":"📐","title":"Quy tắc 3 điểm","text":"Quy tắc 3 điểm: AB⃗ + BC⃗ = AC⃗"},{"emoji":"📊","title":"Quy tắc hình bình hành","text":"Quy tắc hình bình hành"},{"emoji":"🔺","title":"Vectơ đối","text":"Vectơ đối: -AB⃗ = BA⃗"},{"emoji":"📏","title":"Hiệu","text":"Hiệu: AB⃗ - AC⃗ = CB⃗"}]},
-        {"kind":"mathBox","title":"Công thức cốt lõi","formula":"AB⃗ + BC⃗ = AC⃗ (quy tắc 3 điểm)\\nAB⃗ + AD⃗ = AC⃗ (ABCD hình bình hành)\\nAB⃗ - AC⃗ = CB⃗ (quy tắc hiệu)","note":"Ghi nhớ và áp dụng vào bài tập."},
-      ],
+        {
+          kind: "cards",
+          tone: "sea",
+          items: [
+            {
+              emoji: "🎯",
+              title: "Khái niệm cơ bản",
+              text: "Nắm rõ các định nghĩa, khái niệm và tính chất quan trọng được đề cập trong bài học."
+            },
+            {
+              emoji: "⚙️",
+              title: "Nguyên lý hoạt động",
+              text: "Hiểu được cách thức hoạt động, quy trình xử lý hoặc các bước thực hiện cơ bản."
+            }
+          ]
+        },
+        {
+          kind: "note",
+          text: "Ghi nhớ: Học thuộc các khái niệm và áp dụng linh hoạt vào việc giải quyết vấn đề. Chú ý đến các từ khóa quan trọng và ví dụ minh họa trong sách giáo khoa."
+        }
+      ]
     },
+    {
+      id: "van-dung",
+      emoji: "🚀",
+      heading: "2. Vận dụng thực tiễn",
+      blocks: [
+        {
+          kind: "text",
+          text: "Vận dụng kiến thức vào các bài toán thực tế, sử dụng kỹ năng tính toán hiệu quả để tạo ra kết quả chính xác."
+        }
+      ]
+    }
   ],
   summary: [
-    "AB⃗ + BC⃗ = AC⃗ (quy tắc 3 điểm)",
-    "AB⃗ + AD⃗ = AC⃗ (ABCD hình bình hành)",
-    "AB⃗ - AC⃗ = CB⃗ (quy tắc hiệu)",
-  ],
+    "Hiểu rõ định nghĩa và khái niệm trọng tâm của bài.",
+    "Biết cách phân tích và áp dụng kiến thức vào thực tế.",
+    "Sử dụng thành thạo các công cụ hoặc phương pháp tương ứng."
+  ]
 };
 
 export default bai08;

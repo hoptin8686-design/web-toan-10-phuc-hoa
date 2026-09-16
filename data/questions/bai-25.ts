@@ -3,107 +3,182 @@ import type { Question } from "@/lib/types";
 export const questions: Question[] = [
   {
     id: "q25-01",
-    q: "Câu 1 — Khai triển (a+b)ⁿ. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 1 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: (a+b)ⁿ = Σ Cₙᵏ · aⁿ⁻ᵏ · bᵏ, k=0..n.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q25-02",
-    q: "Câu 2 — Hệ số nhị thức Cₙᵏ. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 2 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: Hệ số hạng thứ k+1: Cₙᵏ.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q25-03",
-    q: "Câu 3 — Tam giác Pascal. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 3 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: Tam giác Pascal: Cₙᵏ = Cₙ₋₁ᵏ⁻¹ + Cₙ₋₁ᵏ.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q25-04",
-    q: "Câu 4 — Tìm hệ số, số hạng. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 4 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: (a+b)ⁿ = Σ Cₙᵏ · aⁿ⁻ᵏ · bᵏ, k=0..n.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q25-05",
-    q: "Câu 5 — Khai triển (a+b)ⁿ. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 5 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: Hệ số hạng thứ k+1: Cₙᵏ.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q25-06",
-    q: "Câu 6 — Hệ số nhị thức Cₙᵏ. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 6 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: Tam giác Pascal: Cₙᵏ = Cₙ₋₁ᵏ⁻¹ + Cₙ₋₁ᵏ.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q25-07",
-    q: "Câu 7 — Tam giác Pascal. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 7 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: (a+b)ⁿ = Σ Cₙᵏ · aⁿ⁻ᵏ · bᵏ, k=0..n.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q25-08",
-    q: "Câu 8 — Tìm hệ số, số hạng. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 8 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: Hệ số hạng thứ k+1: Cₙᵏ.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q25-09",
-    q: "Câu 9 — Khai triển (a+b)ⁿ. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 9 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: Tam giác Pascal: Cₙᵏ = Cₙ₋₁ᵏ⁻¹ + Cₙ₋₁ᵏ.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q25-10",
-    q: "Câu 10 — Hệ số nhị thức Cₙᵏ. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 10 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: (a+b)ⁿ = Σ Cₙᵏ · aⁿ⁻ᵏ · bᵏ, k=0..n.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q25-11",
-    q: "Câu 11 — Tam giác Pascal. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 11 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: Hệ số hạng thứ k+1: Cₙᵏ.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q25-12",
-    q: "Câu 12 — Tìm hệ số, số hạng. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 12 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: Tam giác Pascal: Cₙᵏ = Cₙ₋₁ᵏ⁻¹ + Cₙ₋₁ᵏ.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q25-13",
-    q: "Câu 13 — Khai triển (a+b)ⁿ. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 13 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: (a+b)ⁿ = Σ Cₙᵏ · aⁿ⁻ᵏ · bᵏ, k=0..n.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q25-14",
-    q: "Câu 14 — Hệ số nhị thức Cₙᵏ. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 14 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: Hệ số hạng thứ k+1: Cₙᵏ.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q25-15",
-    q: "Câu 15 — Tam giác Pascal. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 15 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: Tam giác Pascal: Cₙᵏ = Cₙ₋₁ᵏ⁻¹ + Cₙ₋₁ᵏ.",
-  },
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
+  }
 ];

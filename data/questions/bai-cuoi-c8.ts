@@ -2,108 +2,183 @@ import type { Question } from "@/lib/types";
 
 export const questions: Question[] = [
   {
-    id: "qcc8-01",
-    q: "Câu 1 — Quy tắc đếm. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    id: "qcuoi-c8-01",
+    q: "Câu 1 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: Quy tắc cộng/nhân.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc8-02",
-    q: "Câu 2 — P, A, C. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    id: "qcuoi-c8-02",
+    q: "Câu 2 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: n!, Aₙᵏ, Cₙᵏ.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc8-03",
-    q: "Câu 3 — Nhị thức Newton. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    id: "qcuoi-c8-03",
+    q: "Câu 3 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: (a+b)ⁿ.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc8-04",
-    q: "Câu 4 — Ứng dụng. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    id: "qcuoi-c8-04",
+    q: "Câu 4 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: Quy tắc cộng/nhân.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc8-05",
-    q: "Câu 5 — Quy tắc đếm. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    id: "qcuoi-c8-05",
+    q: "Câu 5 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: n!, Aₙᵏ, Cₙᵏ.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc8-06",
-    q: "Câu 6 — P, A, C. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    id: "qcuoi-c8-06",
+    q: "Câu 6 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: (a+b)ⁿ.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc8-07",
-    q: "Câu 7 — Nhị thức Newton. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    id: "qcuoi-c8-07",
+    q: "Câu 7 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: Quy tắc cộng/nhân.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc8-08",
-    q: "Câu 8 — Ứng dụng. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    id: "qcuoi-c8-08",
+    q: "Câu 8 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: n!, Aₙᵏ, Cₙᵏ.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc8-09",
-    q: "Câu 9 — Quy tắc đếm. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    id: "qcuoi-c8-09",
+    q: "Câu 9 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: (a+b)ⁿ.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc8-10",
-    q: "Câu 10 — P, A, C. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    id: "qcuoi-c8-10",
+    q: "Câu 10 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: Quy tắc cộng/nhân.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc8-11",
-    q: "Câu 11 — Nhị thức Newton. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    id: "qcuoi-c8-11",
+    q: "Câu 11 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: n!, Aₙᵏ, Cₙᵏ.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc8-12",
-    q: "Câu 12 — Ứng dụng. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    id: "qcuoi-c8-12",
+    q: "Câu 12 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: (a+b)ⁿ.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc8-13",
-    q: "Câu 13 — Quy tắc đếm. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    id: "qcuoi-c8-13",
+    q: "Câu 13 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: Quy tắc cộng/nhân.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc8-14",
-    q: "Câu 14 — P, A, C. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    id: "qcuoi-c8-14",
+    q: "Câu 14 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: n!, Aₙᵏ, Cₙᵏ.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc8-15",
-    q: "Câu 15 — Nhị thức Newton. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    id: "qcuoi-c8-15",
+    q: "Câu 15 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: (a+b)ⁿ.",
-  },
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
+  }
 ];

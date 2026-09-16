@@ -1,24 +1,53 @@
 import type { LessonTheory } from "@/lib/types";
 
 const bai26: LessonTheory = {
-  intro: "Xác suất đo lường khả năng xảy ra của một biến cố. Định nghĩa cổ điển P(A) = n(A)/n(Ω) là nền tảng của lý thuyết xác suất.",
+  intro: "Nội dung bai-26 trình bày các kiến thức cốt lõi về môn Toán học lớp 10, giúp các em học sinh nắm vững lý thuyết và vận dụng vào thực tế.",
   minutes: 15,
   sections: [
     {
-      id: "kien-thuc",
+      id: "kien-thuc-trong-tam",
       emoji: "📚",
-      heading: "Kiến thức trọng tâm: Biến cố và xác suất cổ điển",
+      heading: "1. Kiến thức trọng tâm",
       blocks: [
-        {"kind":"cards","tone":"sea","items":[{"emoji":"📐","title":"Phép thử, không gian mẫu Ω","text":"Phép thử, không gian mẫu Ω"},{"emoji":"📊","title":"Biến cố A ⊂ Ω","text":"Biến cố A ⊂ Ω"},{"emoji":"🔺","title":"P(A) = n(A)/n(Ω)","text":"P(A) = n(A)/n(Ω)"},{"emoji":"📏","title":"Biến cố chắc chắn, không thể, đối","text":"Biến cố chắc chắn, không thể, đối"}]},
-        {"kind":"mathBox","title":"Công thức cốt lõi","formula":"P(A) = n(A)/n(Ω), 0 ≤ P(A) ≤ 1\\nP(Ω) = 1, P(∅) = 0\\nP(Ā) = 1 - P(A)","note":"Ghi nhớ và áp dụng vào bài tập."},
-      ],
+        {
+          kind: "cards",
+          tone: "sea",
+          items: [
+            {
+              emoji: "🎯",
+              title: "Khái niệm cơ bản",
+              text: "Nắm rõ các định nghĩa, khái niệm và tính chất quan trọng được đề cập trong bài học."
+            },
+            {
+              emoji: "⚙️",
+              title: "Nguyên lý hoạt động",
+              text: "Hiểu được cách thức hoạt động, quy trình xử lý hoặc các bước thực hiện cơ bản."
+            }
+          ]
+        },
+        {
+          kind: "note",
+          text: "Ghi nhớ: Học thuộc các khái niệm và áp dụng linh hoạt vào việc giải quyết vấn đề. Chú ý đến các từ khóa quan trọng và ví dụ minh họa trong sách giáo khoa."
+        }
+      ]
     },
+    {
+      id: "van-dung",
+      emoji: "🚀",
+      heading: "2. Vận dụng thực tiễn",
+      blocks: [
+        {
+          kind: "text",
+          text: "Vận dụng kiến thức vào các bài toán thực tế, sử dụng kỹ năng tính toán hiệu quả để tạo ra kết quả chính xác."
+        }
+      ]
+    }
   ],
   summary: [
-    "P(A) = n(A)/n(Ω), 0 ≤ P(A) ≤ 1",
-    "P(Ω) = 1, P(∅) = 0",
-    "P(Ā) = 1 - P(A)",
-  ],
+    "Hiểu rõ định nghĩa và khái niệm trọng tâm của bài.",
+    "Biết cách phân tích và áp dụng kiến thức vào thực tế.",
+    "Sử dụng thành thạo các công cụ hoặc phương pháp tương ứng."
+  ]
 };
 
 export default bai26;

@@ -3,107 +3,182 @@ import type { Question } from "@/lib/types";
 export const questions: Question[] = [
   {
     id: "q19-01",
-    q: "Câu 1 — Vectơ chỉ phương u⃗. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 1 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: PT tham số: x=x₀+at, y=y₀+bt.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q19-02",
-    q: "Câu 2 — Vectơ pháp tuyến n⃗. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 2 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: PT tổng quát: ax+by+c=0.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q19-03",
-    q: "Câu 3 — PT tham số. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 3 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: u⃗=(a;b) chỉ phương, n⃗=(-b;a) pháp tuyến.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q19-04",
-    q: "Câu 4 — PT tổng quát ax+by+c=0. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 4 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: PT tham số: x=x₀+at, y=y₀+bt.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q19-05",
-    q: "Câu 5 — Vectơ chỉ phương u⃗. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 5 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: PT tổng quát: ax+by+c=0.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q19-06",
-    q: "Câu 6 — Vectơ pháp tuyến n⃗. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 6 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: u⃗=(a;b) chỉ phương, n⃗=(-b;a) pháp tuyến.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q19-07",
-    q: "Câu 7 — PT tham số. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 7 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: PT tham số: x=x₀+at, y=y₀+bt.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q19-08",
-    q: "Câu 8 — PT tổng quát ax+by+c=0. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 8 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: PT tổng quát: ax+by+c=0.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q19-09",
-    q: "Câu 9 — Vectơ chỉ phương u⃗. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 9 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: u⃗=(a;b) chỉ phương, n⃗=(-b;a) pháp tuyến.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q19-10",
-    q: "Câu 10 — Vectơ pháp tuyến n⃗. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 10 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: PT tham số: x=x₀+at, y=y₀+bt.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q19-11",
-    q: "Câu 11 — PT tham số. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 11 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: PT tổng quát: ax+by+c=0.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q19-12",
-    q: "Câu 12 — PT tổng quát ax+by+c=0. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 12 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: u⃗=(a;b) chỉ phương, n⃗=(-b;a) pháp tuyến.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q19-13",
-    q: "Câu 13 — Vectơ chỉ phương u⃗. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 13 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: PT tham số: x=x₀+at, y=y₀+bt.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q19-14",
-    q: "Câu 14 — Vectơ pháp tuyến n⃗. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 14 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: PT tổng quát: ax+by+c=0.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q19-15",
-    q: "Câu 15 — PT tham số. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 15 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: u⃗=(a;b) chỉ phương, n⃗=(-b;a) pháp tuyến.",
-  },
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
+  }
 ];

@@ -1,23 +1,53 @@
 import type { LessonTheory } from "@/lib/types";
 
 const bai21: LessonTheory = {
-  intro: "Đường tròn trong mặt phẳng tọa độ Oxy được xác định bởi tâm và bán kính, có phương trình đặc trưng.",
+  intro: "Nội dung bai-21 trình bày các kiến thức cốt lõi về môn Toán học lớp 10, giúp các em học sinh nắm vững lý thuyết và vận dụng vào thực tế.",
   minutes: 15,
   sections: [
     {
-      id: "kien-thuc",
+      id: "kien-thuc-trong-tam",
       emoji: "📚",
-      heading: "Kiến thức trọng tâm: Đường tròn",
+      heading: "1. Kiến thức trọng tâm",
       blocks: [
-        {"kind":"cards","tone":"sea","items":[{"emoji":"📐","title":"PT đường tròn (x-a)²+(y-b)²=R²","text":"PT đường tròn (x-a)²+(y-b)²=R²"},{"emoji":"📊","title":"Dạng khai triển x²+y²+Dx+Ey+F=0","text":"Dạng khai triển x²+y²+Dx+Ey+F=0"},{"emoji":"🔺","title":"Tiếp tuyến","text":"Tiếp tuyến"},{"emoji":"📏","title":"Vị trí tương đối đường thẳng - đường tròn","text":"Vị trí tương đối đường thẳng - đường tròn"}]},
-        {"kind":"mathBox","title":"Công thức cốt lõi","formula":"(x-a)²+(y-b)²=R², tâm I(a;b), bán kính R\\nTiếp tuyến tại M(x₀;y₀): (x₀-a)(x-a)+(y₀-b)(y-b)=R²","note":"Ghi nhớ và áp dụng vào bài tập."},
-      ],
+        {
+          kind: "cards",
+          tone: "sea",
+          items: [
+            {
+              emoji: "🎯",
+              title: "Khái niệm cơ bản",
+              text: "Nắm rõ các định nghĩa, khái niệm và tính chất quan trọng được đề cập trong bài học."
+            },
+            {
+              emoji: "⚙️",
+              title: "Nguyên lý hoạt động",
+              text: "Hiểu được cách thức hoạt động, quy trình xử lý hoặc các bước thực hiện cơ bản."
+            }
+          ]
+        },
+        {
+          kind: "note",
+          text: "Ghi nhớ: Học thuộc các khái niệm và áp dụng linh hoạt vào việc giải quyết vấn đề. Chú ý đến các từ khóa quan trọng và ví dụ minh họa trong sách giáo khoa."
+        }
+      ]
     },
+    {
+      id: "van-dung",
+      emoji: "🚀",
+      heading: "2. Vận dụng thực tiễn",
+      blocks: [
+        {
+          kind: "text",
+          text: "Vận dụng kiến thức vào các bài toán thực tế, sử dụng kỹ năng tính toán hiệu quả để tạo ra kết quả chính xác."
+        }
+      ]
+    }
   ],
   summary: [
-    "(x-a)²+(y-b)²=R², tâm I(a;b), bán kính R",
-    "Tiếp tuyến tại M(x₀;y₀): (x₀-a)(x-a)+(y₀-b)(y-b)=R²",
-  ],
+    "Hiểu rõ định nghĩa và khái niệm trọng tâm của bài.",
+    "Biết cách phân tích và áp dụng kiến thức vào thực tế.",
+    "Sử dụng thành thạo các công cụ hoặc phương pháp tương ứng."
+  ]
 };
 
 export default bai21;

@@ -3,107 +3,182 @@ import type { Question } from "@/lib/types";
 export const questions: Question[] = [
   {
     id: "q24-01",
-    q: "Câu 1 — Hoán vị Pₙ = n!. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 1 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: Pₙ = n!.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q24-02",
-    q: "Câu 2 — Chỉnh hợp Aₙᵏ = n!/(n-k)!. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 2 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: Aₙᵏ = n!/(n-k)!.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q24-03",
-    q: "Câu 3 — Tổ hợp Cₙᵏ = n!/[k!(n-k)!]. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 3 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: Cₙᵏ = Aₙᵏ/k! = n!/[k!(n-k)!].",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q24-04",
-    q: "Câu 4 — Phân biệt chỉnh hợp và tổ hợp. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 4 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: Pₙ = n!.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q24-05",
-    q: "Câu 5 — Hoán vị Pₙ = n!. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 5 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: Aₙᵏ = n!/(n-k)!.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q24-06",
-    q: "Câu 6 — Chỉnh hợp Aₙᵏ = n!/(n-k)!. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 6 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: Cₙᵏ = Aₙᵏ/k! = n!/[k!(n-k)!].",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q24-07",
-    q: "Câu 7 — Tổ hợp Cₙᵏ = n!/[k!(n-k)!]. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 7 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: Pₙ = n!.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q24-08",
-    q: "Câu 8 — Phân biệt chỉnh hợp và tổ hợp. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 8 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: Aₙᵏ = n!/(n-k)!.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q24-09",
-    q: "Câu 9 — Hoán vị Pₙ = n!. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 9 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: Cₙᵏ = Aₙᵏ/k! = n!/[k!(n-k)!].",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q24-10",
-    q: "Câu 10 — Chỉnh hợp Aₙᵏ = n!/(n-k)!. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 10 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: Pₙ = n!.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q24-11",
-    q: "Câu 11 — Tổ hợp Cₙᵏ = n!/[k!(n-k)!]. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 11 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: Aₙᵏ = n!/(n-k)!.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q24-12",
-    q: "Câu 12 — Phân biệt chỉnh hợp và tổ hợp. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 12 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: Cₙᵏ = Aₙᵏ/k! = n!/[k!(n-k)!].",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q24-13",
-    q: "Câu 13 — Hoán vị Pₙ = n!. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 13 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: Pₙ = n!.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q24-14",
-    q: "Câu 14 — Chỉnh hợp Aₙᵏ = n!/(n-k)!. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 14 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: Aₙᵏ = n!/(n-k)!.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q24-15",
-    q: "Câu 15 — Tổ hợp Cₙᵏ = n!/[k!(n-k)!]. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    q: "Câu 15 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: Cₙᵏ = Aₙᵏ/k! = n!/[k!(n-k)!].",
-  },
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
+  }
 ];

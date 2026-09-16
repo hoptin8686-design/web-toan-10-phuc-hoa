@@ -2,108 +2,183 @@ import type { Question } from "@/lib/types";
 
 export const questions: Question[] = [
   {
-    id: "qcc4-01",
-    q: "Câu 1 — Vectơ bằng nhau, cùng phương. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    id: "qcuoi-c4-01",
+    q: "Câu 1 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: AB⃗+BC⃗=AC⃗.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc4-02",
-    q: "Câu 2 — Quy tắc cộng trừ. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    id: "qcuoi-c4-02",
+    q: "Câu 2 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: GA⃗+GB⃗+GC⃗=0⃗.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc4-03",
-    q: "Câu 3 — Tích với số, trung điểm, trọng tâm. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    id: "qcuoi-c4-03",
+    q: "Câu 3 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: a⃗·b⃗=|a⃗||b⃗|cos(a⃗,b⃗).",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc4-04",
-    q: "Câu 4 — Tích vô hướng, vuông góc. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    id: "qcuoi-c4-04",
+    q: "Câu 4 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: Vuông góc ⟺ tích vô hướng = 0.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc4-05",
-    q: "Câu 5 — Vectơ bằng nhau, cùng phương. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    id: "qcuoi-c4-05",
+    q: "Câu 5 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: AB⃗+BC⃗=AC⃗.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc4-06",
-    q: "Câu 6 — Quy tắc cộng trừ. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    id: "qcuoi-c4-06",
+    q: "Câu 6 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: GA⃗+GB⃗+GC⃗=0⃗.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc4-07",
-    q: "Câu 7 — Tích với số, trung điểm, trọng tâm. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    id: "qcuoi-c4-07",
+    q: "Câu 7 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: a⃗·b⃗=|a⃗||b⃗|cos(a⃗,b⃗).",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc4-08",
-    q: "Câu 8 — Tích vô hướng, vuông góc. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    id: "qcuoi-c4-08",
+    q: "Câu 8 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: Vuông góc ⟺ tích vô hướng = 0.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc4-09",
-    q: "Câu 9 — Vectơ bằng nhau, cùng phương. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    id: "qcuoi-c4-09",
+    q: "Câu 9 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: AB⃗+BC⃗=AC⃗.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc4-10",
-    q: "Câu 10 — Quy tắc cộng trừ. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    id: "qcuoi-c4-10",
+    q: "Câu 10 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: GA⃗+GB⃗+GC⃗=0⃗.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc4-11",
-    q: "Câu 11 — Tích với số, trung điểm, trọng tâm. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    id: "qcuoi-c4-11",
+    q: "Câu 11 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: a⃗·b⃗=|a⃗||b⃗|cos(a⃗,b⃗).",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc4-12",
-    q: "Câu 12 — Tích vô hướng, vuông góc. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    id: "qcuoi-c4-12",
+    q: "Câu 12 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: Vuông góc ⟺ tích vô hướng = 0.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc4-13",
-    q: "Câu 13 — Vectơ bằng nhau, cùng phương. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    id: "qcuoi-c4-13",
+    q: "Câu 13 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: AB⃗+BC⃗=AC⃗.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc4-14",
-    q: "Câu 14 — Quy tắc cộng trừ. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    id: "qcuoi-c4-14",
+    q: "Câu 14 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: GA⃗+GB⃗+GC⃗=0⃗.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc4-15",
-    q: "Câu 15 — Tích với số, trung điểm, trọng tâm. Chọn đáp án đúng:",
-    options: ["Đáp án A (đúng)","Đáp án B","Đáp án C","Đáp án D"],
+    id: "qcuoi-c4-15",
+    q: "Câu 15 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đáp án A là đúng. Kiến thức áp dụng: a⃗·b⃗=|a⃗||b⃗|cos(a⃗,b⃗).",
-  },
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
+  }
 ];

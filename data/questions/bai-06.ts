@@ -3,107 +3,182 @@ import type { Question } from "@/lib/types";
 export const questions: Question[] = [
   {
     id: "q06-01",
-    q: "Tam giác ABC có a = 5, b = 7, C = 60°. Giá trị c² bằng:",
-    options: ["39","74","25","49"],
+    q: "Câu 1 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "c² = a²+b²-2ab·cosC = 25+49-2(5)(7)(1/2) = 74-35 = 39.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q06-02",
-    q: "Tam giác ABC có a = 6, A = 30°. Bán kính R đường tròn ngoại tiếp bằng:",
-    options: ["6","3","12","3√3"],
+    q: "Câu 2 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "a/sinA = 2R ⇒ 6/sin30° = 6/(1/2) = 12 = 2R ⇒ R = 6.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q06-03",
-    q: "Diện tích tam giác có a = 4, b = 6, C = 90° bằng:",
-    options: ["12","24","10","8"],
+    q: "Câu 3 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "S = (1/2)·4·6·sin90° = (1/2)·24·1 = 12.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q06-04",
-    q: "Tam giác ABC có a = 3, b = 4, c = 5. Góc C bằng:",
-    options: ["90°","60°","120°","45°"],
+    q: "Câu 4 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "c²=25 = a²+b²=9+16=25 ⇒ cosC = 0 ⇒ C = 90°.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q06-05",
-    q: "Cho tam giác ABC có a = 8, b = 5, C = 60°. Diện tích S bằng:",
-    options: ["10√3","20","20√3","40"],
+    q: "Câu 5 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "S = (1/2)·8·5·sin60° = 20·(√3/2) = 10√3.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q06-06",
-    q: "Tam giác có 3 cạnh a=3, b=4, c=5. Nửa chu vi p bằng:",
-    options: ["6","12","5","7"],
+    q: "Câu 6 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "p = (3+4+5)/2 = 6.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q06-07",
-    q: "Áp dụng Heron: S tam giác cạnh 3, 4, 5 bằng:",
-    options: ["6","12","10","8"],
+    q: "Câu 7 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "p=6. S = √(6·3·2·1) = √36 = 6.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q06-08",
-    q: "Tam giác ABC có B = 120°, a = 5, c = 7. Cạnh b² bằng:",
-    options: ["109","74","39","144"],
+    q: "Câu 8 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "b² = a²+c²-2ac·cosB = 25+49-2(5)(7)cos120° = 74-70(-1/2) = 74+35 = 109.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q06-09",
-    q: "Trong tam giác ABC, nếu a/sinA = 10 thì 2R bằng:",
-    options: ["10","5","20","√10"],
+    q: "Câu 9 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "a/sinA = 2R = 10.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q06-10",
-    q: "Tam giác đều cạnh a có diện tích:",
-    options: ["a²√3/4","a²/2","a²√3/2","a²/4"],
+    q: "Câu 10 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "S = (1/2)·a·a·sin60° = (a²/2)·(√3/2) = a²√3/4.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q06-11",
-    q: "Cho sinA/a = sinB/b = sinC/c. Đây là:",
-    options: ["Định lí sin","Định lí côsin","Pythagore","Heron"],
+    q: "Câu 11 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đây chính là phát biểu định lí sin.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q06-12",
-    q: "Tam giác có a=7, b=8, cosC = 1/4. Cạnh c bằng:",
-    options: ["√85","√113","√49","√141"],
+    q: "Câu 12 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "c² = 49+64-2(7)(8)(1/4) = 113-28 = 85. c = √85.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q06-13",
-    q: "Tam giác vuông tại A có b = 6, c = 8. Cạnh a bằng:",
-    options: ["10","14","2√7","√48"],
+    q: "Câu 13 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "a² = b²+c² = 36+64 = 100. a = 10.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q06-14",
-    q: "Cho S = 10√3, a = 5, b = 8. sin C bằng:",
-    options: ["√3/2","1/2","1","√2/2"],
+    q: "Câu 14 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "S = (1/2)ab·sinC ⇒ 10√3 = 20·sinC ⇒ sinC = √3/2.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q06-15",
-    q: "Tam giác ABC có a = b = c (đều), A bằng:",
-    options: ["60°","90°","45°","120°"],
+    q: "Câu 15 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Tam giác đều có 3 góc bằng nhau = 180°/3 = 60°.",
-  },
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
+  }
 ];

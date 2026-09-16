@@ -1,24 +1,53 @@
 import type { LessonTheory } from "@/lib/types";
 
 const bai17: LessonTheory = {
-  intro: "Xét dấu tam thức bậc hai f(x) = ax² + bx + c là kỹ năng then chốt để giải bất phương trình bậc hai và nhiều bài toán khác.",
+  intro: "Nội dung bai-17 trình bày các kiến thức cốt lõi về môn Toán học lớp 10, giúp các em học sinh nắm vững lý thuyết và vận dụng vào thực tế.",
   minutes: 15,
   sections: [
     {
-      id: "kien-thuc",
+      id: "kien-thuc-trong-tam",
       emoji: "📚",
-      heading: "Kiến thức trọng tâm: Dấu của tam thức bậc hai",
+      heading: "1. Kiến thức trọng tâm",
       blocks: [
-        {"kind":"cards","tone":"sea","items":[{"emoji":"📐","title":"Tam thức bậc hai","text":"Tam thức bậc hai"},{"emoji":"📊","title":"Định lí về dấu","text":"Định lí về dấu"},{"emoji":"🔺","title":"Xét dấu theo Δ","text":"Xét dấu theo Δ"},{"emoji":"📏","title":"Giải bất phương trình bậc hai","text":"Giải bất phương trình bậc hai"}]},
-        {"kind":"mathBox","title":"Công thức cốt lõi","formula":"Δ < 0: f(x) cùng dấu a, ∀x\\nΔ = 0: f(x) = a(x - x₀)², cùng dấu a trừ x = x₀\\nΔ > 0: f(x) trái dấu a trong (x₁; x₂)","note":"Ghi nhớ và áp dụng vào bài tập."},
-      ],
+        {
+          kind: "cards",
+          tone: "sea",
+          items: [
+            {
+              emoji: "🎯",
+              title: "Khái niệm cơ bản",
+              text: "Nắm rõ các định nghĩa, khái niệm và tính chất quan trọng được đề cập trong bài học."
+            },
+            {
+              emoji: "⚙️",
+              title: "Nguyên lý hoạt động",
+              text: "Hiểu được cách thức hoạt động, quy trình xử lý hoặc các bước thực hiện cơ bản."
+            }
+          ]
+        },
+        {
+          kind: "note",
+          text: "Ghi nhớ: Học thuộc các khái niệm và áp dụng linh hoạt vào việc giải quyết vấn đề. Chú ý đến các từ khóa quan trọng và ví dụ minh họa trong sách giáo khoa."
+        }
+      ]
     },
+    {
+      id: "van-dung",
+      emoji: "🚀",
+      heading: "2. Vận dụng thực tiễn",
+      blocks: [
+        {
+          kind: "text",
+          text: "Vận dụng kiến thức vào các bài toán thực tế, sử dụng kỹ năng tính toán hiệu quả để tạo ra kết quả chính xác."
+        }
+      ]
+    }
   ],
   summary: [
-    "Δ < 0: f(x) cùng dấu a, ∀x",
-    "Δ = 0: f(x) = a(x - x₀)², cùng dấu a trừ x = x₀",
-    "Δ > 0: f(x) trái dấu a trong (x₁; x₂)",
-  ],
+    "Hiểu rõ định nghĩa và khái niệm trọng tâm của bài.",
+    "Biết cách phân tích và áp dụng kiến thức vào thực tế.",
+    "Sử dụng thành thạo các công cụ hoặc phương pháp tương ứng."
+  ]
 };
 
 export default bai17;

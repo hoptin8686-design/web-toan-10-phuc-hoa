@@ -1,24 +1,53 @@
 import type { LessonTheory } from "@/lib/types";
 
 const bai16: LessonTheory = {
-  intro: "Hàm số bậc hai y = ax² + bx + c (a ≠ 0) có đồ thị là parabol — đường cong xuất hiện khắp nơi trong tự nhiên và kỹ thuật.",
+  intro: "Nội dung bai-16 trình bày các kiến thức cốt lõi về môn Toán học lớp 10, giúp các em học sinh nắm vững lý thuyết và vận dụng vào thực tế.",
   minutes: 15,
   sections: [
     {
-      id: "kien-thuc",
+      id: "kien-thuc-trong-tam",
       emoji: "📚",
-      heading: "Kiến thức trọng tâm: Hàm số bậc hai",
+      heading: "1. Kiến thức trọng tâm",
       blocks: [
-        {"kind":"cards","tone":"sea","items":[{"emoji":"📐","title":"Đỉnh I(-b/2a; -Δ/4a)","text":"Đỉnh I(-b/2a; -Δ/4a)"},{"emoji":"📊","title":"Trục đối xứng x = -b/2a","text":"Trục đối xứng x = -b/2a"},{"emoji":"🔺","title":"Bảng biến thiên","text":"Bảng biến thiên"},{"emoji":"📏","title":"Đồ thị parabol","text":"Đồ thị parabol"}]},
-        {"kind":"mathBox","title":"Công thức cốt lõi","formula":"Đỉnh I(-b/2a; -Δ/4a)\\na > 0: bề lõm quay lên, GTNN = -Δ/4a\\na < 0: bề lõm quay xuống, GTLN = -Δ/4a","note":"Ghi nhớ và áp dụng vào bài tập."},
-      ],
+        {
+          kind: "cards",
+          tone: "sea",
+          items: [
+            {
+              emoji: "🎯",
+              title: "Khái niệm cơ bản",
+              text: "Nắm rõ các định nghĩa, khái niệm và tính chất quan trọng được đề cập trong bài học."
+            },
+            {
+              emoji: "⚙️",
+              title: "Nguyên lý hoạt động",
+              text: "Hiểu được cách thức hoạt động, quy trình xử lý hoặc các bước thực hiện cơ bản."
+            }
+          ]
+        },
+        {
+          kind: "note",
+          text: "Ghi nhớ: Học thuộc các khái niệm và áp dụng linh hoạt vào việc giải quyết vấn đề. Chú ý đến các từ khóa quan trọng và ví dụ minh họa trong sách giáo khoa."
+        }
+      ]
     },
+    {
+      id: "van-dung",
+      emoji: "🚀",
+      heading: "2. Vận dụng thực tiễn",
+      blocks: [
+        {
+          kind: "text",
+          text: "Vận dụng kiến thức vào các bài toán thực tế, sử dụng kỹ năng tính toán hiệu quả để tạo ra kết quả chính xác."
+        }
+      ]
+    }
   ],
   summary: [
-    "Đỉnh I(-b/2a; -Δ/4a)",
-    "a > 0: bề lõm quay lên, GTNN = -Δ/4a",
-    "a < 0: bề lõm quay xuống, GTLN = -Δ/4a",
-  ],
+    "Hiểu rõ định nghĩa và khái niệm trọng tâm của bài.",
+    "Biết cách phân tích và áp dụng kiến thức vào thực tế.",
+    "Sử dụng thành thạo các công cụ hoặc phương pháp tương ứng."
+  ]
 };
 
 export default bai16;

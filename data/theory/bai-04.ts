@@ -1,56 +1,53 @@
 import type { LessonTheory } from "@/lib/types";
 
 const bai04: LessonTheory = {
-  intro: "Hệ bất phương trình bậc nhất hai ẩn giúp mô hình hóa các bài toán tối ưu thực tế. Miền nghiệm là giao của các nửa mặt phẳng, tạo thành miền đa giác lồi — nền tảng của quy hoạch tuyến tính.",
+  intro: "Nội dung bai-04 trình bày các kiến thức cốt lõi về môn Toán học lớp 10, giúp các em học sinh nắm vững lý thuyết và vận dụng vào thực tế.",
   minutes: 15,
   sections: [
     {
-      id: "mien-nghiem-he",
-      emoji: "📊",
-      heading: "1. Miền nghiệm của hệ bất phương trình",
+      id: "kien-thuc-trong-tam",
+      emoji: "📚",
+      heading: "1. Kiến thức trọng tâm",
       blocks: [
         {
-          kind: "mathBox",
-          title: "Phương pháp",
-          formula: "Bước 1: Biểu diễn miền nghiệm từng BPT\\nBước 2: Lấy giao (phần chung) tất cả các miền\\nKết quả: Một miền đa giác lồi (hoặc rỗng)",
-          note: "Miền nghiệm chung có thể là tam giác, tứ giác, ngũ giác... hoặc miền không bị chặn.",
+          kind: "cards",
+          tone: "sea",
+          items: [
+            {
+              emoji: "🎯",
+              title: "Khái niệm cơ bản",
+              text: "Nắm rõ các định nghĩa, khái niệm và tính chất quan trọng được đề cập trong bài học."
+            },
+            {
+              emoji: "⚙️",
+              title: "Nguyên lý hoạt động",
+              text: "Hiểu được cách thức hoạt động, quy trình xử lý hoặc các bước thực hiện cơ bản."
+            }
+          ]
         },
         {
-          kind: "check",
-          q: "Hệ x ≥ 0, y ≥ 0, x + y ≤ 5 có miền nghiệm là:",
-          options: ["Tam giác OAB với A(5;0), B(0;5)","Nửa mặt phẳng","Toàn bộ mặt phẳng","Đoạn thẳng"],
-          answer: 0,
-          explain: "3 ràng buộc tạo tam giác vuông có 3 đỉnh O(0;0), A(5;0), B(0;5).",
-        },
-      ],
+          kind: "note",
+          text: "Ghi nhớ: Học thuộc các khái niệm và áp dụng linh hoạt vào việc giải quyết vấn đề. Chú ý đến các từ khóa quan trọng và ví dụ minh họa trong sách giáo khoa."
+        }
+      ]
     },
     {
-      id: "bai-toan-toi-uu",
-      emoji: "🎯",
-      heading: "2. Bài toán tìm GTLN, GTNN trên miền đa giác",
+      id: "van-dung",
+      emoji: "🚀",
+      heading: "2. Vận dụng thực tiễn",
       blocks: [
         {
-          kind: "steps",
-          items: [
-            { label: "Bước 1", title: "Xác định miền nghiệm D", text: "Vẽ miền đa giác lồi từ hệ bất phương trình." },
-            { label: "Bước 2", title: "Tìm tọa độ các đỉnh", text: "Giải hệ phương trình từng cặp đường biên để tìm các đỉnh đa giác." },
-            { label: "Bước 3", title: "Tính F tại mỗi đỉnh", text: "Thay tọa độ từng đỉnh vào F = ax + by. GTLN và GTNN của F đạt tại các đỉnh." },
-          ],
-        },
-        {
-          kind: "warn",
-          title: "Định lí quan trọng",
-          text: "Nếu F = ax + by đạt GTLN hoặc GTNN trên miền đa giác lồi D thì giá trị đó đạt tại ít nhất một đỉnh của D.",
-        },
-      ],
-    },
+          kind: "text",
+          text: "Vận dụng kiến thức vào các bài toán thực tế, sử dụng kỹ năng tính toán hiệu quả để tạo ra kết quả chính xác."
+        }
+      ]
+    }
   ],
   summary: [
-    "Miền nghiệm của hệ BPT bậc nhất hai ẩn là giao các nửa mặt phẳng.",
-    "Miền đa giác lồi có thể là tam giác, tứ giác hoặc ngũ giác.",
-    "F = ax + by đạt GTLN, GTNN tại đỉnh của miền đa giác.",
-    "Tìm tọa độ đỉnh bằng cách giải hệ hai đường biên.",
-  ],
+    "Hiểu rõ định nghĩa và khái niệm trọng tâm của bài.",
+    "Biết cách phân tích và áp dụng kiến thức vào thực tế.",
+    "Sử dụng thành thạo các công cụ hoặc phương pháp tương ứng."
+  ]
 };
 
 export default bai04;

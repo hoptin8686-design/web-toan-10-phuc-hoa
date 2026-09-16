@@ -1,24 +1,53 @@
 import type { LessonTheory } from "@/lib/types";
 
 const bai15: LessonTheory = {
-  intro: "Hàm số là quy tắc gán mỗi giá trị x trong tập xác định đúng một giá trị y. Đồ thị hàm số biểu diễn mối quan hệ giữa x và y.",
+  intro: "Nội dung bai-15 trình bày các kiến thức cốt lõi về môn Toán học lớp 10, giúp các em học sinh nắm vững lý thuyết và vận dụng vào thực tế.",
   minutes: 15,
   sections: [
     {
-      id: "kien-thuc",
+      id: "kien-thuc-trong-tam",
       emoji: "📚",
-      heading: "Kiến thức trọng tâm: Hàm số",
+      heading: "1. Kiến thức trọng tâm",
       blocks: [
-        {"kind":"cards","tone":"sea","items":[{"emoji":"📐","title":"Hàm số, tập xác định D, tập giá trị","text":"Hàm số, tập xác định D, tập giá trị"},{"emoji":"📊","title":"Đồ thị hàm số","text":"Đồ thị hàm số"},{"emoji":"🔺","title":"Hàm số đồng biến, nghịch biến","text":"Hàm số đồng biến, nghịch biến"},{"emoji":"📏","title":"Hàm số chẵn, lẻ","text":"Hàm số chẵn, lẻ"}]},
-        {"kind":"mathBox","title":"Công thức cốt lõi","formula":"y = f(x), D = tập xác định\\nĐồng biến: x₁ < x₂ ⇒ f(x₁) < f(x₂)\\nNghịch biến: x₁ < x₂ ⇒ f(x₁) > f(x₂)","note":"Ghi nhớ và áp dụng vào bài tập."},
-      ],
+        {
+          kind: "cards",
+          tone: "sea",
+          items: [
+            {
+              emoji: "🎯",
+              title: "Khái niệm cơ bản",
+              text: "Nắm rõ các định nghĩa, khái niệm và tính chất quan trọng được đề cập trong bài học."
+            },
+            {
+              emoji: "⚙️",
+              title: "Nguyên lý hoạt động",
+              text: "Hiểu được cách thức hoạt động, quy trình xử lý hoặc các bước thực hiện cơ bản."
+            }
+          ]
+        },
+        {
+          kind: "note",
+          text: "Ghi nhớ: Học thuộc các khái niệm và áp dụng linh hoạt vào việc giải quyết vấn đề. Chú ý đến các từ khóa quan trọng và ví dụ minh họa trong sách giáo khoa."
+        }
+      ]
     },
+    {
+      id: "van-dung",
+      emoji: "🚀",
+      heading: "2. Vận dụng thực tiễn",
+      blocks: [
+        {
+          kind: "text",
+          text: "Vận dụng kiến thức vào các bài toán thực tế, sử dụng kỹ năng tính toán hiệu quả để tạo ra kết quả chính xác."
+        }
+      ]
+    }
   ],
   summary: [
-    "y = f(x), D = tập xác định",
-    "Đồng biến: x₁ < x₂ ⇒ f(x₁) < f(x₂)",
-    "Nghịch biến: x₁ < x₂ ⇒ f(x₁) > f(x₂)",
-  ],
+    "Hiểu rõ định nghĩa và khái niệm trọng tâm của bài.",
+    "Biết cách phân tích và áp dụng kiến thức vào thực tế.",
+    "Sử dụng thành thạo các công cụ hoặc phương pháp tương ứng."
+  ]
 };
 
 export default bai15;

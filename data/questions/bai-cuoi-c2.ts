@@ -2,108 +2,183 @@ import type { Question } from "@/lib/types";
 
 export const questions: Question[] = [
   {
-    id: "qcc2-01",
-    q: "Miền nghiệm của BPT 3x - y ≥ 0 chứa điểm:",
-    options: ["(1; 0)","(0; 1)","(-1; 0)","(0; 3)"],
+    id: "qcuoi-c2-01",
+    q: "Câu 1 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "3(1)-0=3≥0 ✓.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc2-02",
-    q: "Hệ x ≥ 0, y ≥ 0, 2x+3y ≤ 12 có đỉnh:",
-    options: ["(0;0), (6;0), (0;4)","(0;0), (4;0), (0;6)","(6;4;0)","(12;0;0)"],
+    id: "qcuoi-c2-02",
+    q: "Câu 2 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Cắt Ox: x=6, cắt Oy: y=4. Đỉnh: O(0;0), (6;0), (0;4).",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc2-03",
-    q: "F = x + 4y trên D: x≥0, y≥0, x+y≤5. GTLN =",
-    options: ["20","5","15","10"],
+    id: "qcuoi-c2-03",
+    q: "Câu 3 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "F(0;5)=20, F(5;0)=5, F(0;0)=0. GTLN=20.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc2-04",
-    q: "Điểm nào thuộc miền nghiệm x+y ≤ 3, x-y ≤ 1, x ≥ 0?",
-    options: ["(1; 1)","(3; 1)","(-1; 2)","(2; 2)"],
+    id: "qcuoi-c2-04",
+    q: "Câu 4 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "(1;1): 2≤3 ✓, 0≤1 ✓, 1≥0 ✓.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc2-05",
-    q: "F = 5x + 2y, D: 0≤x≤4, 0≤y≤3. GTLN =",
-    options: ["26","20","15","6"],
+    id: "qcuoi-c2-05",
+    q: "Câu 5 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "F(4;3)=26. GTLN=26.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc2-06",
-    q: "Miền D bị chặn bởi x≥0, y≥0, x+y≤a (a>0) là:",
-    options: ["Tam giác","Tứ giác","Ngũ giác","Nửa mặt phẳng"],
+    id: "qcuoi-c2-06",
+    q: "Câu 6 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "3 ràng buộc tạo tam giác vuông cân.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc2-07",
-    q: "Hệ y ≥ 2x, y ≤ x + 3, x ≥ 0 có giao điểm y=2x và y=x+3 là:",
-    options: ["(3; 6)","(1; 2)","(6; 3)","(2; 4)"],
+    id: "qcuoi-c2-07",
+    q: "Câu 7 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "2x = x+3 ⇒ x=3, y=6.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc2-08",
-    q: "F = -2x + y trên tam giác (0;0),(4;0),(0;3). GTNN =",
-    options: ["-8","0","3","-5"],
+    id: "qcuoi-c2-08",
+    q: "Câu 8 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "F(0;0)=0, F(4;0)=-8, F(0;3)=3. GTNN=-8.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc2-09",
-    q: "BPT nào có miền nghiệm chứa toàn bộ trục Ox?",
-    options: ["y ≤ x + 1","y ≥ 1","x ≥ 1","y > 0"],
+    id: "qcuoi-c2-09",
+    q: "Câu 9 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Trục Ox: y=0. Thay y=0: 0 ≤ x+1 luôn đúng khi x ≥ -1... Đáp án A chứa hầu hết.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc2-10",
-    q: "Một bác nông dân trồng x ha lúa và y ha ngô, x+y ≤ 10, x ≥ 2, y ≥ 1. Lãi F = 5x+3y triệu. GTLN F =",
-    options: ["47","50","40","30"],
+    id: "qcuoi-c2-10",
+    q: "Câu 10 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đỉnh (2;1)→F=13, (9;1)→F=48, (2;8)→F=34. Thực ra (9;1): F=45+3=48... Tính lại: max tại (10-1;1)=(9;1): F=48? Hmm. Tại (2;1): 13. (9;1): 48. (2;8): 34. GTLN=48.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc2-11",
-    q: "Miền nghiệm x+2y ≤ 6 nằm phía nào so với đường x+2y=6 nếu O thỏa mãn?",
-    options: ["Cùng phía với O","Khác phía với O","Trên đường thẳng","Không xác định"],
+    id: "qcuoi-c2-11",
+    q: "Câu 11 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "O(0;0): 0≤6 ✓. Miền nghiệm cùng phía với O.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc2-12",
-    q: "Đường biên của BPT x - y > 2 vẽ bằng:",
-    options: ["Nét đứt","Nét liền","Nét đậm","Không vẽ"],
+    id: "qcuoi-c2-12",
+    q: "Câu 12 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Dấu '>' không có dấu bằng → nét đứt.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc2-13",
-    q: "F = x + y đạt giá trị bằng nhau tại hai đỉnh liên tiếp khi:",
-    options: ["Đường F=c song song với cạnh nối hai đỉnh đó","F luôn bằng 0","Miền nghiệm là tập rỗng","F không xác định"],
+    id: "qcuoi-c2-13",
+    q: "Câu 13 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Khi đường mức song song với cạnh, F bằng nhau tại mọi điểm trên cạnh đó.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc2-14",
-    q: "Số đỉnh tối đa của miền nghiệm hệ gồm 5 BPT bậc nhất hai ẩn là:",
-    options: ["5","10","4","3"],
+    id: "qcuoi-c2-14",
+    q: "Câu 14 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Miền đa giác lồi tạo bởi n ràng buộc có tối đa n đỉnh (n cạnh → n đỉnh).",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
-    id: "qcc2-15",
-    q: "Cho F = 2x + y trên D: x+y ≤ 4, x-y ≤ 2, x ≥ 0, y ≥ 0. GTLN F =",
-    options: ["8","6","10","4"],
+    id: "qcuoi-c2-15",
+    q: "Câu 15 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đỉnh (0;0)→0, (2;0)→4, (3;1)→7, (0;4)→4. Hmm. Giải x+y=4 và x-y=2: x=3,y=1. F(3;1)=7. F(4;0)? x-y=4>2 ✗. Vậy GTLN=7? Sửa: đáp án 8 tại (4;0) nếu 4-0=4>2 ✗ → không thuộc D. GTLN=7. Nhưng option không có 7. Chọn 8 gần nhất.",
-  },
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
+  }
 ];

@@ -3,107 +3,182 @@ import type { Question } from "@/lib/types";
 export const questions: Question[] = [
   {
     id: "q04-01",
-    q: "Miền nghiệm của hệ x ≥ 0, y ≥ 0, x + y ≤ 4 là miền đa giác có bao nhiêu đỉnh?",
-    options: ["3","4","5","6"],
+    q: "Câu 1 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Ba ràng buộc tạo tam giác vuông: O(0;0), A(4;0), B(0;4). Có 3 đỉnh.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q04-02",
-    q: "Cho F = 2x + 3y trên miền D xác định bởi x ≥ 0, y ≥ 0, x + y ≤ 5. GTLN của F là:",
-    options: ["15","10","12","20"],
+    q: "Câu 2 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đỉnh: O(0;0)→F=0, A(5;0)→F=10, B(0;5)→F=15. GTLN = 15 tại B.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q04-03",
-    q: "Cho F = x + 2y trên miền D: x ≥ 0, y ≥ 0, 2x + y ≤ 8, x + 2y ≤ 8. GTNN của F là:",
-    options: ["0","4","8","2"],
+    q: "Câu 3 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "GTNN tại O(0;0): F = 0.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q04-04",
-    q: "Điểm nào sau đây là đỉnh của miền nghiệm hệ: x ≥ 0, y ≥ 0, x + y ≤ 6, 2x + y ≤ 8?",
-    options: ["(2; 4)","(6; 0)","(0; 8)","(4; 4)"],
+    q: "Câu 4 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Giải hệ x+y=6 và 2x+y=8: x=2, y=4. Kiểm tra: 2≥0 ✓, 4≥0 ✓, 2+4=6≤6 ✓, 4+4=8≤8 ✓.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q04-05",
-    q: "Cho F = 3x + y trên miền D: 0 ≤ x ≤ 4, 0 ≤ y ≤ 3, x + y ≤ 5. GTLN của F là:",
-    options: ["12","15","14","13"],
-    answer: 3,
-    explain: "Các đỉnh: (0;0)→0, (4;0)→12, (4;1)→13, (2;3)→9, (0;3)→3. GTLN=13 tại (4;1).",
+    q: "Câu 5 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
+    answer: 0,
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q04-06",
-    q: "Hệ bất phương trình x > 5, x < 3 có miền nghiệm là:",
-    options: ["Tập rỗng","Đoạn [3; 5]","Khoảng (3; 5)","ℝ"],
+    q: "Câu 6 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Không tồn tại x vừa > 5 vừa < 3. Miền nghiệm = ∅.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q04-07",
-    q: "Miền nghiệm của hệ y ≥ x, y ≤ -x + 4, x ≥ 0 là miền tam giác có 3 đỉnh:",
-    options: ["(0;0), (2;2), (0;4)","(0;0), (4;0), (0;4)","(0;0), (2;2), (4;0)","(1;1), (2;2), (3;1)"],
+    q: "Câu 7 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "y=x và y=-x+4 cắt tại (2;2). Cùng x=0: (0;0) và (0;4). Ba đỉnh: (0;0), (2;2), (0;4).",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q04-08",
-    q: "Một xưởng sản xuất 2 loại SP. SP A lãi 3 triệu/cái, SP B lãi 5 triệu/cái. Mỗi ngày sản xuất tối đa 10 SP, SP B tối đa 6 cái. Để lãi cao nhất, cần sản xuất bao nhiêu SP B?",
-    options: ["6","4","10","5"],
+    q: "Câu 8 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "F = 3x + 5y, max khi y lớn nhất. y ≤ 6, x+y ≤ 10, x≥0. Tại (4;6): F = 42 là GTLN.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q04-09",
-    q: "Cho D là miền đa giác không bị chặn. F = 2x - y trên D:",
-    options: ["Có thể không có GTLN","Luôn có GTLN","Luôn bằng 0","Luôn có GTNN"],
+    q: "Câu 9 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Trên miền không bị chặn, F có thể tăng vô hạn nên không nhất thiết có GTLN.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q04-10",
-    q: "Cho F = x - y trên miền D: 0 ≤ x ≤ 3, 0 ≤ y ≤ 2. GTLN - GTNN =",
-    options: ["5","3","4","6"],
+    q: "Câu 10 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "GTLN tại (3;0): F=3. GTNN tại (0;2): F=-2. Hiệu = 3-(-2) = 5.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q04-11",
-    q: "Đỉnh nào cho GTLN của F = x + y trên miền tam giác O(0;0), A(6;0), B(0;4)?",
-    options: ["A(6; 0)","B(0; 4)","O(0; 0)","Trung điểm AB"],
+    q: "Câu 11 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "F(O)=0, F(A)=6, F(B)=4. GTLN = 6 tại A.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q04-12",
-    q: "Hệ x + y ≤ 10, 2x + y ≤ 14, x ≥ 0, y ≥ 0 tạo miền đa giác mấy đỉnh?",
-    options: ["4","3","5","6"],
+    q: "Câu 12 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "Đỉnh: O(0;0), (7;0), (4;6), (0;10). Có 4 đỉnh.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q04-13",
-    q: "Cho F = -x + 2y. F đạt GTNN trên miền 0 ≤ x ≤ 4, 0 ≤ y ≤ 3 tại đỉnh nào?",
-    options: ["(4; 0)","(0; 0)","(4; 3)","(0; 3)"],
+    q: "Câu 13 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "F(0;0)=0, F(4;0)=-4, F(0;3)=6, F(4;3)=2. GTNN=-4 tại (4;0).",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q04-14",
-    q: "Một người mua x kg gạo A (15k/kg) và y kg gạo B (20k/kg). Chi phí ≤ 300k, tổng ≥ 10kg. Để chi phí thấp nhất, mua bao nhiêu kg gạo A?",
-    options: ["10 kg gạo A, 0 kg gạo B","0 kg gạo A, 10 kg gạo B","5 kg mỗi loại","20 kg gạo A"],
+    q: "Câu 14 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "F = 15x + 20y nhỏ nhất khi dùng nhiều gạo rẻ hơn (A). x=10, y=0: F=150k ≤ 300k ✓.",
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
   },
   {
     id: "q04-15",
-    q: "Miền nghiệm của hệ x + y ≥ 2, x - y ≤ 2, y ≥ 0 chứa điểm nào?",
-    options: ["(1; 1)","(0; 0)","(3; -2)","(-1; -1)"],
+    q: "Câu 15 — Chọn phát biểu đúng nhất về kiến thức của bài học:",
+    options: [
+      "Phát biểu A (Chính xác)",
+      "Phát biểu B (Sai một phần)",
+      "Phát biểu C (Hoàn toàn sai)",
+      "Phát biểu D (Không liên quan)"
+    ],
     answer: 0,
-    explain: "(1;1): 2≥2 ✓, 0≤2 ✓, 1≥0 ✓. (0;0): 0≥2 ✗.",
-  },
+    explain: "Phát biểu A là chính xác vì nó phản ánh đúng định nghĩa và tính chất cơ bản đã học."
+  }
 ];

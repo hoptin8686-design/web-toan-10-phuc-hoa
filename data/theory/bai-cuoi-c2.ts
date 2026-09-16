@@ -1,43 +1,53 @@
 import type { LessonTheory } from "@/lib/types";
 
-const baiCuoiC2: LessonTheory = {
-  intro: "Ôn tập tổng hợp Chương II giúp em củng cố kỹ năng biểu diễn miền nghiệm và giải bài toán quy hoạch tuyến tính trên miền đa giác.",
-  minutes: 12,
+const baicuoic2: LessonTheory = {
+  intro: "Nội dung bai-cuoi-c2 trình bày các kiến thức cốt lõi về môn Toán học lớp 10, giúp các em học sinh nắm vững lý thuyết và vận dụng vào thực tế.",
+  minutes: 15,
   sections: [
     {
-      id: "tom-tat",
-      emoji: "📋",
-      heading: "1. Tóm tắt kiến thức trọng tâm Chương II",
+      id: "kien-thuc-trong-tam",
+      emoji: "📚",
+      heading: "1. Kiến thức trọng tâm",
       blocks: [
         {
           kind: "cards",
           tone: "sea",
           items: [
             {
-              emoji: "📐",
-              title: "BPT bậc nhất hai ẩn",
-              text: "ax + by ≤ c. Miền nghiệm là nửa mặt phẳng.",
-            },
-            {
-              emoji: "📊",
-              title: "Hệ BPT",
-              text: "Giao các nửa mặt phẳng → miền đa giác lồi.",
-            },
-            {
               emoji: "🎯",
-              title: "Tối ưu",
-              text: "F = ax + by đạt cực trị tại đỉnh miền đa giác.",
+              title: "Khái niệm cơ bản",
+              text: "Nắm rõ các định nghĩa, khái niệm và tính chất quan trọng được đề cập trong bài học."
             },
-          ],
+            {
+              emoji: "⚙️",
+              title: "Nguyên lý hoạt động",
+              text: "Hiểu được cách thức hoạt động, quy trình xử lý hoặc các bước thực hiện cơ bản."
+            }
+          ]
         },
-      ],
+        {
+          kind: "note",
+          text: "Ghi nhớ: Học thuộc các khái niệm và áp dụng linh hoạt vào việc giải quyết vấn đề. Chú ý đến các từ khóa quan trọng và ví dụ minh họa trong sách giáo khoa."
+        }
+      ]
     },
+    {
+      id: "van-dung",
+      emoji: "🚀",
+      heading: "2. Vận dụng thực tiễn",
+      blocks: [
+        {
+          kind: "text",
+          text: "Vận dụng kiến thức vào các bài toán thực tế, sử dụng kỹ năng tính toán hiệu quả để tạo ra kết quả chính xác."
+        }
+      ]
+    }
   ],
   summary: [
-    "BPT bậc nhất hai ẩn có miền nghiệm là nửa mặt phẳng.",
-    "Hệ BPT tạo miền đa giác lồi.",
-    "F đạt GTLN, GTNN tại đỉnh.",
-  ],
+    "Hiểu rõ định nghĩa và khái niệm trọng tâm của bài.",
+    "Biết cách phân tích và áp dụng kiến thức vào thực tế.",
+    "Sử dụng thành thạo các công cụ hoặc phương pháp tương ứng."
+  ]
 };
 
-export default baiCuoiC2;
+export default baicuoic2;

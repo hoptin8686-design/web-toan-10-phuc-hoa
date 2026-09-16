@@ -4,27 +4,41 @@ export const extra: LessonExtra = {
   tf: [
     {
       id: "tf-01",
-      context: "Xét tính Đúng / Sai về Bài tập cuối chương IX:",
+      context: "Xét tính Đúng / Sai của các phát biểu sau đây liên quan đến bài học:",
       statements: [
-          { text: "P(A) = n(A)/n(Ω) là công thức đúng.", answer: true, explain: "Đúng theo SGK." },
-          { text: "Xác suất cổ điển không liên quan đến bài này.", answer: false, explain: "Đây là nội dung chính của bài. SAI." },
-          { text: "Ứng dụng là phần quan trọng.", answer: true, explain: "Đúng, đây là kiến thức trọng tâm." },
-          { text: "Bài này không có ứng dụng thực tế.", answer: false, explain: "Toán học luôn có ứng dụng thực tế. SAI." },
-      ],
-    },
+        {
+          text: "Nội dung bài học có ứng dụng quan trọng trong thực tiễn.",
+          answer: true,
+          explain: "Đúng, các kiến thức Toán học luôn gắn liền với ứng dụng thực tế."
+        },
+        {
+          text: "Chỉ cần học thuộc lòng, không cần thực hành tính toán.",
+          answer: false,
+          explain: "Sai, Toán học là môn học đòi hỏi kết hợp giữa lý thuyết và thực hành."
+        },
+        {
+          text: "Kiến thức bài này là nền tảng cho các phần tiếp theo.",
+          answer: true,
+          explain: "Đúng, các nội dung có sự liên kết logic với nhau."
+        },
+        {
+          text: "Việc sử dụng sai phương pháp có thể dẫn đến kết quả sai lệch.",
+          answer: true,
+          explain: "Đúng, tính chính xác là yêu cầu bắt buộc trong Toán học."
+        }
+      ]
+    }
   ],
   essay: [
     {
       id: "es-01",
-      q: "Trình bày và áp dụng: P(A) = n(A)/n(Ω)",
-      math: "",
-      answer: "Công thức: P(A) = n(A)/n(Ω)\\n\\nÁp dụng: Thay số vào công thức và tính toán theo từng bước.",
+      q: "Trình bày tóm tắt các khái niệm chính yếu yếu của bài học và nêu một ví dụ minh họa.",
+      answer: "Các khái niệm chính bao gồm: [Khái niệm 1], [Khái niệm 2]. \n\nVí dụ: Ứng dụng khái niệm này trong việc giải quyết một bài toán đơn giản."
     },
     {
       id: "es-02",
-      q: "Bài tập vận dụng: Biến cố đối",
-      math: "",
-      answer: "Giải:\\nBước 1: Xác định dữ kiện\\nBước 2: Áp dụng P(Ā) = 1 - P(A)\\nBước 3: Tính toán và kết luận.",
-    },
-  ],
+      q: "Phân tích một tình huống thực tế và đưa ra cách giải quyết bằng việc áp dụng kiến thức vừa học.",
+      answer: "Tình huống: [Mô tả tình huống]\n\nGiải quyết: Sử dụng công cụ/thuật toán được giới thiệu trong bài học để đưa ra phương án tối ưu nhất."
+    }
+  ]
 };

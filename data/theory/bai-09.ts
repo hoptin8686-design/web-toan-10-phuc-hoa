@@ -1,25 +1,53 @@
 import type { LessonTheory } from "@/lib/types";
 
 const bai09: LessonTheory = {
-  intro: "Tích k·a⃗ cho phép thay đổi độ dài và hướng của vectơ theo hệ số k, là công cụ quan trọng trong phân tích vectơ.",
+  intro: "Nội dung bai-09 trình bày các kiến thức cốt lõi về môn Toán học lớp 10, giúp các em học sinh nắm vững lý thuyết và vận dụng vào thực tế.",
   minutes: 15,
   sections: [
     {
-      id: "kien-thuc",
+      id: "kien-thuc-trong-tam",
       emoji: "📚",
-      heading: "Kiến thức trọng tâm: Tích của một vectơ với một số",
+      heading: "1. Kiến thức trọng tâm",
       blocks: [
-        {"kind":"cards","tone":"sea","items":[{"emoji":"📐","title":"Tích k·a⃗","text":"Tích k·a⃗: |k|·|a⃗|, cùng hướng nếu k>0"},{"emoji":"📊","title":"Hai vectơ cùng phương","text":"Hai vectơ cùng phương: b⃗ = k·a⃗"},{"emoji":"🔺","title":"Trung điểm M","text":"Trung điểm M: OM⃗ = (OA⃗+OB⃗)/2"},{"emoji":"📏","title":"Trọng tâm G","text":"Trọng tâm G: OG⃗ = (OA⃗+OB⃗+OC⃗)/3"}]},
-        {"kind":"mathBox","title":"Công thức cốt lõi","formula":"k·a⃗: cùng phương a⃗, |k·a⃗| = |k|·|a⃗|\\nb⃗ cùng phương a⃗ (a⃗≠0⃗) ⟺ ∃k: b⃗ = k·a⃗\\nTrung điểm: MA⃗ + MB⃗ = 0⃗\\nTrọng tâm: GA⃗ + GB⃗ + GC⃗ = 0⃗","note":"Ghi nhớ và áp dụng vào bài tập."},
-      ],
+        {
+          kind: "cards",
+          tone: "sea",
+          items: [
+            {
+              emoji: "🎯",
+              title: "Khái niệm cơ bản",
+              text: "Nắm rõ các định nghĩa, khái niệm và tính chất quan trọng được đề cập trong bài học."
+            },
+            {
+              emoji: "⚙️",
+              title: "Nguyên lý hoạt động",
+              text: "Hiểu được cách thức hoạt động, quy trình xử lý hoặc các bước thực hiện cơ bản."
+            }
+          ]
+        },
+        {
+          kind: "note",
+          text: "Ghi nhớ: Học thuộc các khái niệm và áp dụng linh hoạt vào việc giải quyết vấn đề. Chú ý đến các từ khóa quan trọng và ví dụ minh họa trong sách giáo khoa."
+        }
+      ]
     },
+    {
+      id: "van-dung",
+      emoji: "🚀",
+      heading: "2. Vận dụng thực tiễn",
+      blocks: [
+        {
+          kind: "text",
+          text: "Vận dụng kiến thức vào các bài toán thực tế, sử dụng kỹ năng tính toán hiệu quả để tạo ra kết quả chính xác."
+        }
+      ]
+    }
   ],
   summary: [
-    "k·a⃗: cùng phương a⃗, |k·a⃗| = |k|·|a⃗|",
-    "b⃗ cùng phương a⃗ (a⃗≠0⃗) ⟺ ∃k: b⃗ = k·a⃗",
-    "Trung điểm: MA⃗ + MB⃗ = 0⃗",
-    "Trọng tâm: GA⃗ + GB⃗ + GC⃗ = 0⃗",
-  ],
+    "Hiểu rõ định nghĩa và khái niệm trọng tâm của bài.",
+    "Biết cách phân tích và áp dụng kiến thức vào thực tế.",
+    "Sử dụng thành thạo các công cụ hoặc phương pháp tương ứng."
+  ]
 };
 
 export default bai09;

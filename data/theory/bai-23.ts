@@ -1,23 +1,53 @@
 import type { LessonTheory } from "@/lib/types";
 
 const bai23: LessonTheory = {
-  intro: "Quy tắc cộng và quy tắc nhân là hai nguyên lí nền tảng của toán đếm tổ hợp, giúp đếm số cách thực hiện một công việc.",
+  intro: "Nội dung bai-23 trình bày các kiến thức cốt lõi về môn Toán học lớp 10, giúp các em học sinh nắm vững lý thuyết và vận dụng vào thực tế.",
   minutes: 15,
   sections: [
     {
-      id: "kien-thuc",
+      id: "kien-thuc-trong-tam",
       emoji: "📚",
-      heading: "Kiến thức trọng tâm: Quy tắc đếm",
+      heading: "1. Kiến thức trọng tâm",
       blocks: [
-        {"kind":"cards","tone":"sea","items":[{"emoji":"📐","title":"Quy tắc cộng","text":"Quy tắc cộng"},{"emoji":"📊","title":"Quy tắc nhân","text":"Quy tắc nhân"},{"emoji":"🔺","title":"Sơ đồ hình cây","text":"Sơ đồ hình cây"},{"emoji":"📏","title":"Bài toán đếm thực tế","text":"Bài toán đếm thực tế"}]},
-        {"kind":"mathBox","title":"Công thức cốt lõi","formula":"Quy tắc cộng: m + n cách (hai công việc không đồng thời)\\nQuy tắc nhân: m × n cách (hai công việc nối tiếp)","note":"Ghi nhớ và áp dụng vào bài tập."},
-      ],
+        {
+          kind: "cards",
+          tone: "sea",
+          items: [
+            {
+              emoji: "🎯",
+              title: "Khái niệm cơ bản",
+              text: "Nắm rõ các định nghĩa, khái niệm và tính chất quan trọng được đề cập trong bài học."
+            },
+            {
+              emoji: "⚙️",
+              title: "Nguyên lý hoạt động",
+              text: "Hiểu được cách thức hoạt động, quy trình xử lý hoặc các bước thực hiện cơ bản."
+            }
+          ]
+        },
+        {
+          kind: "note",
+          text: "Ghi nhớ: Học thuộc các khái niệm và áp dụng linh hoạt vào việc giải quyết vấn đề. Chú ý đến các từ khóa quan trọng và ví dụ minh họa trong sách giáo khoa."
+        }
+      ]
     },
+    {
+      id: "van-dung",
+      emoji: "🚀",
+      heading: "2. Vận dụng thực tiễn",
+      blocks: [
+        {
+          kind: "text",
+          text: "Vận dụng kiến thức vào các bài toán thực tế, sử dụng kỹ năng tính toán hiệu quả để tạo ra kết quả chính xác."
+        }
+      ]
+    }
   ],
   summary: [
-    "Quy tắc cộng: m + n cách (hai công việc không đồng thời)",
-    "Quy tắc nhân: m × n cách (hai công việc nối tiếp)",
-  ],
+    "Hiểu rõ định nghĩa và khái niệm trọng tâm của bài.",
+    "Biết cách phân tích và áp dụng kiến thức vào thực tế.",
+    "Sử dụng thành thạo các công cụ hoặc phương pháp tương ứng."
+  ]
 };
 
 export default bai23;

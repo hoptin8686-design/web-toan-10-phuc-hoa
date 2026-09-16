@@ -1,25 +1,53 @@
 import type { LessonTheory } from "@/lib/types";
 
 const bai13: LessonTheory = {
-  intro: "Độ phân tán cho biết dữ liệu tập trung hay phân tán. Phương sai và độ lệch chuẩn là hai thước đo quan trọng nhất.",
+  intro: "Nội dung bai-13 trình bày các kiến thức cốt lõi về môn Toán học lớp 10, giúp các em học sinh nắm vững lý thuyết và vận dụng vào thực tế.",
   minutes: 15,
   sections: [
     {
-      id: "kien-thuc",
+      id: "kien-thuc-trong-tam",
       emoji: "📚",
-      heading: "Kiến thức trọng tâm: Số đặc trưng đo độ phân tán",
+      heading: "1. Kiến thức trọng tâm",
       blocks: [
-        {"kind":"cards","tone":"sea","items":[{"emoji":"📐","title":"Khoảng biến thiên R = xmax - xmin","text":"Khoảng biến thiên R = xmax - xmin"},{"emoji":"📊","title":"Khoảng tứ phân vị ΔQ = Q₃ - Q₁","text":"Khoảng tứ phân vị ΔQ = Q₃ - Q₁"},{"emoji":"🔺","title":"Phương sai S²","text":"Phương sai S²"},{"emoji":"📏","title":"Độ lệch chuẩn S","text":"Độ lệch chuẩn S"}]},
-        {"kind":"mathBox","title":"Công thức cốt lõi","formula":"R = xmax - xmin\\nS² = Σ(xᵢ - x̄)²/n\\nS = √S²\\nS nhỏ → dữ liệu tập trung, S lớn → phân tán","note":"Ghi nhớ và áp dụng vào bài tập."},
-      ],
+        {
+          kind: "cards",
+          tone: "sea",
+          items: [
+            {
+              emoji: "🎯",
+              title: "Khái niệm cơ bản",
+              text: "Nắm rõ các định nghĩa, khái niệm và tính chất quan trọng được đề cập trong bài học."
+            },
+            {
+              emoji: "⚙️",
+              title: "Nguyên lý hoạt động",
+              text: "Hiểu được cách thức hoạt động, quy trình xử lý hoặc các bước thực hiện cơ bản."
+            }
+          ]
+        },
+        {
+          kind: "note",
+          text: "Ghi nhớ: Học thuộc các khái niệm và áp dụng linh hoạt vào việc giải quyết vấn đề. Chú ý đến các từ khóa quan trọng và ví dụ minh họa trong sách giáo khoa."
+        }
+      ]
     },
+    {
+      id: "van-dung",
+      emoji: "🚀",
+      heading: "2. Vận dụng thực tiễn",
+      blocks: [
+        {
+          kind: "text",
+          text: "Vận dụng kiến thức vào các bài toán thực tế, sử dụng kỹ năng tính toán hiệu quả để tạo ra kết quả chính xác."
+        }
+      ]
+    }
   ],
   summary: [
-    "R = xmax - xmin",
-    "S² = Σ(xᵢ - x̄)²/n",
-    "S = √S²",
-    "S nhỏ → dữ liệu tập trung, S lớn → phân tán",
-  ],
+    "Hiểu rõ định nghĩa và khái niệm trọng tâm của bài.",
+    "Biết cách phân tích và áp dụng kiến thức vào thực tế.",
+    "Sử dụng thành thạo các công cụ hoặc phương pháp tương ứng."
+  ]
 };
 
 export default bai13;

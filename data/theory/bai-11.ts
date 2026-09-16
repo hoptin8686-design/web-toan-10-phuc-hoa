@@ -1,24 +1,53 @@
 import type { LessonTheory } from "@/lib/types";
 
 const bai11: LessonTheory = {
-  intro: "Trong thực tế, các phép đo luôn có sai số. Hiểu cách tính và đánh giá sai số giúp em có kết quả đáng tin cậy.",
+  intro: "Nội dung bai-11 trình bày các kiến thức cốt lõi về môn Toán học lớp 10, giúp các em học sinh nắm vững lý thuyết và vận dụng vào thực tế.",
   minutes: 15,
   sections: [
     {
-      id: "kien-thuc",
+      id: "kien-thuc-trong-tam",
       emoji: "📚",
-      heading: "Kiến thức trọng tâm: Số gần đúng và sai số",
+      heading: "1. Kiến thức trọng tâm",
       blocks: [
-        {"kind":"cards","tone":"sea","items":[{"emoji":"📐","title":"Số gần đúng","text":"Số gần đúng"},{"emoji":"📊","title":"Sai số tuyệt đối","text":"Sai số tuyệt đối"},{"emoji":"🔺","title":"Sai số tương đối","text":"Sai số tương đối"},{"emoji":"📏","title":"Quy tròn số","text":"Quy tròn số"}]},
-        {"kind":"mathBox","title":"Công thức cốt lõi","formula":"Sai số tuyệt đối: |a - ā|\\nSai số tương đối: δ = Δa/|ā| × 100%\\nQuy tròn: Xét chữ số sau hàng cần quy tròn","note":"Ghi nhớ và áp dụng vào bài tập."},
-      ],
+        {
+          kind: "cards",
+          tone: "sea",
+          items: [
+            {
+              emoji: "🎯",
+              title: "Khái niệm cơ bản",
+              text: "Nắm rõ các định nghĩa, khái niệm và tính chất quan trọng được đề cập trong bài học."
+            },
+            {
+              emoji: "⚙️",
+              title: "Nguyên lý hoạt động",
+              text: "Hiểu được cách thức hoạt động, quy trình xử lý hoặc các bước thực hiện cơ bản."
+            }
+          ]
+        },
+        {
+          kind: "note",
+          text: "Ghi nhớ: Học thuộc các khái niệm và áp dụng linh hoạt vào việc giải quyết vấn đề. Chú ý đến các từ khóa quan trọng và ví dụ minh họa trong sách giáo khoa."
+        }
+      ]
     },
+    {
+      id: "van-dung",
+      emoji: "🚀",
+      heading: "2. Vận dụng thực tiễn",
+      blocks: [
+        {
+          kind: "text",
+          text: "Vận dụng kiến thức vào các bài toán thực tế, sử dụng kỹ năng tính toán hiệu quả để tạo ra kết quả chính xác."
+        }
+      ]
+    }
   ],
   summary: [
-    "Sai số tuyệt đối: |a - ā|",
-    "Sai số tương đối: δ = Δa/|ā| × 100%",
-    "Quy tròn: Xét chữ số sau hàng cần quy tròn",
-  ],
+    "Hiểu rõ định nghĩa và khái niệm trọng tâm của bài.",
+    "Biết cách phân tích và áp dụng kiến thức vào thực tế.",
+    "Sử dụng thành thạo các công cụ hoặc phương pháp tương ứng."
+  ]
 };
 
 export default bai11;

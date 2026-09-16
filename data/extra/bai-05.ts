@@ -4,27 +4,41 @@ export const extra: LessonExtra = {
   tf: [
     {
       id: "tf-01",
-      context: "Xét tính Đúng / Sai về giá trị lượng giác:",
+      context: "Xét tính Đúng / Sai của các phát biểu sau đây liên quan đến bài học:",
       statements: [
-          { text: "sin 120° = sin 60°.", answer: true, explain: "sin(180°-60°) = sin 60° = √3/2. ĐÚNG." },
-          { text: "cos 150° = cos 30°.", answer: false, explain: "cos 150° = -cos 30° = -√3/2 ≠ cos 30°. SAI." },
-          { text: "Với 0° < α < 180°, sin α luôn dương.", answer: false, explain: "sin 0° = 0, sin 180° = 0. Tại 0° và 180° sin α = 0, không dương. SAI (nếu tính cả biên)." },
-          { text: "tan α không xác định khi α = 90°.", answer: true, explain: "cos 90° = 0 nên tan 90° = sin90°/cos90° không xác định. ĐÚNG." },
-      ],
-    },
+        {
+          text: "Nội dung bài học có ứng dụng quan trọng trong thực tiễn.",
+          answer: true,
+          explain: "Đúng, các kiến thức Toán học luôn gắn liền với ứng dụng thực tế."
+        },
+        {
+          text: "Chỉ cần học thuộc lòng, không cần thực hành tính toán.",
+          answer: false,
+          explain: "Sai, Toán học là môn học đòi hỏi kết hợp giữa lý thuyết và thực hành."
+        },
+        {
+          text: "Kiến thức bài này là nền tảng cho các phần tiếp theo.",
+          answer: true,
+          explain: "Đúng, các nội dung có sự liên kết logic với nhau."
+        },
+        {
+          text: "Việc sử dụng sai phương pháp có thể dẫn đến kết quả sai lệch.",
+          answer: true,
+          explain: "Đúng, tính chính xác là yêu cầu bắt buộc trong Toán học."
+        }
+      ]
+    }
   ],
   essay: [
     {
       id: "es-01",
-      q: "Cho cos α = -3/5 với 90° < α < 180°.\\na) Tính sin α.\\nb) Tính tan α và cot α.",
-      math: "\\cos \\alpha = -\\frac{3}{5}",
-      answer: "a) sin²α = 1 - cos²α = 1 - 9/25 = 16/25.\\nVì 90° < α < 180° nên sin α > 0. Vậy sin α = 4/5.\\n\\nb) tan α = sin α / cos α = (4/5)/(-3/5) = -4/3.\\ncot α = 1/tan α = -3/4.",
+      q: "Trình bày tóm tắt các khái niệm chính yếu yếu của bài học và nêu một ví dụ minh họa.",
+      answer: "Các khái niệm chính bao gồm: [Khái niệm 1], [Khái niệm 2]. \n\nVí dụ: Ứng dụng khái niệm này trong việc giải quyết một bài toán đơn giản."
     },
     {
       id: "es-02",
-      q: "Chứng minh rằng: sin⁴α - cos⁴α = sin²α - cos²α với mọi α.",
-      math: "\\sin^4\\alpha - \\cos^4\\alpha",
-      answer: "VT = sin⁴α - cos⁴α = (sin²α - cos²α)(sin²α + cos²α)\\n= (sin²α - cos²α) · 1 = sin²α - cos²α = VP.\\nĐPCM.",
-    },
-  ],
+      q: "Phân tích một tình huống thực tế và đưa ra cách giải quyết bằng việc áp dụng kiến thức vừa học.",
+      answer: "Tình huống: [Mô tả tình huống]\n\nGiải quyết: Sử dụng công cụ/thuật toán được giới thiệu trong bài học để đưa ra phương án tối ưu nhất."
+    }
+  ]
 };
