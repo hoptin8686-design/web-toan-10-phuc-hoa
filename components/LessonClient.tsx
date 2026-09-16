@@ -56,8 +56,8 @@ export default function LessonClient({
   // 1. Chế độ Đọc SGK Điện tử màn hình máy tính
   if (mode === "sgk") {
     return (
-      <main className="playground min-h-screen px-4 py-6 sm:px-8">
-        <div className="mx-auto max-w-6xl">
+      <main className="playground min-h-screen px-2 py-3 sm:px-8 sm:py-6">
+        <div className="mx-auto max-w-6xl w-full">
           <SgkViewer
             lessonId={lessonId}
             lessonTitle={lessonTitle}
