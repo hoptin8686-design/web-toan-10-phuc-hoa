@@ -7,7 +7,24 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+
+  <!-- KaTeX Typography for Mathematics -->
+  <link rel="stylesheet" href="/vendor/katex/katex.min.css" onerror="this.onerror=null;this.href='https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css';" />
+  <script defer src="/vendor/katex/katex.min.js" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js';"></script>
+  <script defer src="/vendor/katex/contrib/auto-render.min.js" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js';" onload="renderAllMath();"></script>
+
   <style>
+    .katex {
+      font-size: 1.08em;
+      text-rendering: auto;
+    }
+    .katex-display {
+      margin: 8px 0 !important;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: 4px 0;
+    }
+
     :root {
       --bg: #090d16;
       --card-bg: rgba(19, 26, 42, 0.85);
@@ -952,36 +969,36 @@
       <p>Trong toán học, để diễn đạt tính phổ quát hoặc sự tồn tại của các đối tượng, ta dùng hai kí hiệu đặc biệt:</p>
       <div class="grid-dual-box">
         <div class="math-box" style="margin:0;">
-          <div class="math-box-title" style="color: var(--accent);">∀ : Với mọi</div>
-          <p style="font-size: 14px;">Kí hiệu: ∀x ∈ X, P(x)</p>
-          <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom:0;">Đúng khi P(x) đúng với <em>toàn bộ</em> các phần tử x thuộc X.</p>
+          <div class="math-box-title" style="color: var(--accent);">$\forall$ : Với mọi</div>
+          <p style="font-size: 14px;">Kí hiệu: $\forall x \in X, P(x)$</p>
+          <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom:0;">Đúng khi $P(x)$ đúng với <em>toàn bộ</em> các phần tử $x$ thuộc $X$.</p>
         </div>
         <div class="math-box" style="margin:0;">
-          <div class="math-box-title" style="color: var(--coral);">∃ : Tồn tại (có ít nhất một)</div>
-          <p style="font-size: 14px;">Kí hiệu: ∃x ∈ X, P(x)</p>
-          <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom:0;">Đúng khi chỉ ra được <em>ít nhất một</em> phần tử x₀ thuộc X làm cho P(x₀) đúng.</p>
+          <div class="math-box-title" style="color: var(--coral);">$\exists$ : Tồn tại (có ít nhất một)</div>
+          <p style="font-size: 14px;">Kí hiệu: $\exists x \in X, P(x)$</p>
+          <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom:0;">Đúng khi chỉ ra được <em>ít nhất một</em> phần tử $x_0$ thuộc $X$ làm cho $P(x_0)$ đúng.</p>
         </div>
       </div>
 
       <figure class="sgk-figure" style="max-width: min(100%, 480px); margin: 20px auto;">
         <img src="/sgk/images/bai1_venn_tap_so.png" alt="Biểu đồ Ven các tập hợp số N, Z, Q, R" style="max-width: 100%;" />
-        <figcaption>Ôn tập các tập hợp số tự nhiên, nguyên, hữu tỉ và thực: ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ</figcaption>
+        <figcaption>Ôn tập các tập hợp số tự nhiên, nguyên, hữu tỉ và thực: $\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R}$</figcaption>
       </figure>
 
-      <h3 class="sub-heading">Quy tắc phủ định mệnh đề chứa ∀ và ∃</h3>
+      <h3 class="sub-heading">Quy tắc phủ định mệnh đề chứa $\forall$ và $\exists$</h3>
       <div class="math-box highlight">
         <div class="math-box-title">⚡ Bẫy thường gặp trong các đề thi THPT!</div>
-        <p>• Phủ định của <em>"∀x ∈ X, P(x)"</em> là <strong>"∃x ∈ X, P̄(x)"</strong></p>
-        <p style="margin-bottom:0;">• Phủ định của <em>"∃x ∈ X, P(x)"</em> là <strong>"∀x ∈ X, P̄(x)"</strong></p>
+        <p>• Phủ định của <em>"$\forall x \in X, P(x)$"</em> là <strong>"$\exists x \in X, \overline{P}(x)$"</strong></p>
+        <p style="margin-bottom:0;">• Phủ định của <em>"$\exists x \in X, P(x)$"</em> là <strong>"$\forall x \in X, \overline{P}(x)$"</strong></p>
       </div>
 
       <div class="example-box">
         <div class="example-title">Ví dụ phủ định</div>
-        <p>Tìm phủ định của mệnh đề: <em>"Mọi số thực x đều có x² ≥ 0"</em>.</p>
+        <p>Tìm phủ định của mệnh đề: <em>"Mọi số thực x đều có $x^2 \ge 0$"</em>.</p>
         <div class="example-solution">
           <span class="sol-tag">Lời giải:</span>
-          <p>Mệnh đề đã cho viết dưới dạng kí hiệu là: ∀x ∈ ℝ, x² ≥ 0.</p>
-          <p style="margin-bottom:0;">Phủ định của nó là: <strong>∃x ∈ ℝ, x² &lt; 0</strong> (Tồn tại số thực x sao cho x² &lt; 0).</p>
+          <p>Mệnh đề đã cho viết dưới dạng kí hiệu là: $\forall x \in \mathbb{R}, x^2 \ge 0$.</p>
+          <p style="margin-bottom:0;">Phủ định của nó là: <strong>$\exists x \in \mathbb{R}, x^2 &lt; 0$</strong> (Tồn tại số thực x sao cho $x^2 &lt; 0$).</p>
         </div>
       </div>
     </div>
@@ -1093,6 +1110,32 @@
       });
     }
   });
+
+  // KaTeX Mathematical Formula Rendering
+  function renderAllMath() {
+    if (window.renderMathInElement) {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: '$$', right: '$$', display: true},
+          {left: '$', right: '$', display: false},
+          {left: '\\(', right: '\\)', display: false},
+          {left: '\\[', right: '\\]', display: true}
+        ],
+        throwOnError: false,
+        ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code", "option"]
+      });
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", renderAllMath);
+  window.addEventListener("load", renderAllMath);
+  var mathInterval = setInterval(function() {
+    if (window.renderMathInElement) {
+      renderAllMath();
+      clearInterval(mathInterval);
+    }
+  }, 100);
+  setTimeout(function() { clearInterval(mathInterval); }, 5000);
 </script>
 
 </body>
