@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SGK Điện tử Toán 10 — Bài 1: Mệnh đề (Kết nối tri thức)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: rgba(19, 26, 42, 0.85);
+      --card-border: rgba(99, 130, 190, 0.18);
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-glow: rgba(56, 189, 248, 0.2);
+      --coral: #f43f5e;
+      --leaf: #10b981;
+      --gold: #f59e0b;
+      --sidebar-w: 290px;
+      --font-scale: 16px;
+    }
+
+    body.theme-light {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --card-border: #e2e8f0;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --accent: #0284c7;
+      --accent-glow: rgba(2, 132, 199, 0.15);
+    }
+
+    body.theme-sepia {
+      --bg: #fbf7ee;
+      --card-bg: #f4ede0;
+      --card-border: #e3d5be;
+      --text: #423528;
+      --text-muted: #796652;
+      --accent: #c2691e;
+      --accent-glow: rgba(194, 105, 30, 0.15);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-size: var(--font-scale);
+      line-height: 1.75;
+      overflow-x: hidden;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    /* Layout for Desktop Screen */
+    .sgk-wrapper {
+      display: flex;
+      min-height: 100vh;
+      max-width: 1560px;
+      margin: 0 auto;
+    }
+
+    /* Left Sticky Sidebar (Desktop TOC) */
+    .sgk-sidebar {
+      width: var(--sidebar-w);
+      height: 100vh;
+      position: sticky;
+      top: 0;
+      padding: 24px 18px;
+      border-right: 1px solid var(--card-border);
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      z-index: 20;
+    }
+
+    .book-meta {
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--card-border);
+      margin-bottom: 16px;
+    }
+    .book-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    .book-title {
+      font-family: 'Baloo 2', cursive;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .toc-title {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .toc-list {
+      list-style: none;
+      overflow-y: auto;
+      flex: 1;
+      padding-right: 4px;
+    }
+    .toc-list::-webkit-scrollbar {
+      width: 4px;
+    }
+    .toc-list::-webkit-scrollbar-thumb {
+      background: var(--card-border);
+      border-radius: 4px;
+    }
+
+    .toc-item a {
+      display: block;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 13.5px;
+      padding: 7px 10px;
+      border-radius: 8px;
+      margin-bottom: 3px;
+      transition: all 0.15s ease;
+      line-height: 1.4;
+    }
+    .toc-item a:hover {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text);
+    }
+    .toc-item.active a {
+      background: var(--accent-glow);
+      color: var(--accent);
+      font-weight: 600;
+      border-left: 3px solid var(--accent);
+    }
+
+    /* Controls Bar inside sidebar */
+    .screen-controls {
+      padding-top: 14px;
+      border-top: 1px solid var(--card-border);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .control-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .btn-group {
+      display: flex;
+      gap: 4px;
+    }
+    .btn-mini {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid var(--card-border);
+      color: var(--text);
+      padding: 4px 9px;
+      font-size: 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.15s;
+    }
+    .btn-mini:hover {
+      background: var(--accent);
+      color: #0f172a;
+      border-color: var(--accent);
+    }
+
+    /* Main Content Area */
+    .sgk-main {
+      flex: 1;
+      padding: 40px 64px 80px;
+      max-width: 1000px;
+    }
+
+    /* Header & Breadcrumb */
+    .sgk-header {
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--card-border);
+    }
+    .breadcrumb {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .breadcrumb a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .lesson-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.1);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    h1.lesson-title {
+      font-family: 'Baloo 2', cursive;
+      font-size: 34px;
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+    .lesson-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      color: var(--text-muted);
+      font-size: 13.5px;
+      margin-top: 12px;
+    }
+    .meta-chip {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* Objective Box */
+    .objective-box {
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.08), rgba(99, 102, 241, 0.08));
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin-bottom: 36px;
+      position: relative;
+    }
+    .obj-title {
+      font-weight: 700;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .obj-list {
+      padding-left: 20px;
+      color: var(--text);
+      font-size: 14.5px;
+    }
+    .obj-list li {
+      margin-bottom: 6px;
+    }
+
+    /* Section Typography */
+    .sgk-section {
+      margin-bottom: 48px;
+      scroll-margin-top: 30px;
+    }
+    h2.section-heading {
+      font-family: 'Baloo 2', cursive;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--card-border);
+    }
+    .section-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: var(--accent);
+      color: #090d16;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    h3.sub-heading {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 20px 0 10px;
+    }
+
+    p {
+      margin-bottom: 14px;
+      text-align: justify;
+    }
+
+    /* Definition & Formula Box */
+    .math-box {
+      background: var(--card-bg);
+      border-left: 4px solid var(--accent);
+      border-top: 1px solid var(--card-border);
+      border-right: 1px solid var(--card-border);
+      border-bottom: 1px solid var(--card-border);
+      border-radius: 0 12px 12px 0;
+      padding: 18px 22px;
+      margin: 22px 0;
+    }
+    .math-box.highlight {
+      border-left-color: var(--gold);
+      background: rgba(245, 158, 11, 0.06);
+    }
+    .math-box-title {
+      font-weight: 700;
+      font-size: 15px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .math-formula {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 16px;
+      font-weight: 600;
+      background: rgba(0, 0, 0, 0.25);
+      padding: 10px 14px;
+      border-radius: 8px;
+      margin: 10px 0;
+      display: block;
+      overflow-x: auto;
+      color: #38bdf8;
+    }
+
+    /* Activity Box (HĐ, Vận dụng) */
+    .activity-box {
+      border: 1px dashed var(--card-border);
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.02);
+    }
+    .activity-label {
+      font-weight: 700;
+      font-size: 13.5px;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Example Box */
+    .example-box {
+      background: rgba(16, 185, 129, 0.06);
+      border-left: 4px solid var(--leaf);
+      border-radius: 0 10px 10px 0;
+      padding: 16px 20px;
+      margin: 18px 0;
+    }
+    .example-title {
+      font-weight: 700;
+      color: var(--leaf);
+      margin-bottom: 6px;
+    }
+    .example-solution {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px dashed rgba(16, 185, 129, 0.3);
+      font-size: 14.5px;
+    }
+    .sol-tag {
+      font-weight: 600;
+      color: var(--leaf);
+    }
+
+    /* Truth Table (Bảng chân trị logic) */
+    .truth-table-wrap {
+      margin: 20px 0;
+      overflow-x: auto;
+    }
+    .truth-table {
+      width: 100%;
+      max-width: 520px;
+      border-collapse: collapse;
+      background: var(--card-bg);
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--card-border);
+      font-size: 14.5px;
+    }
+    .truth-table th, .truth-table td {
+      padding: 10px 14px;
+      text-align: center;
+      border: 1px solid var(--card-border);
+    }
+    .truth-table th {
+      background: rgba(56, 189, 248, 0.12);
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .truth-table tr:hover {
+      background: rgba(255, 255, 255, 0.03);
+    }
+    .val-true {
+      color: var(--leaf);
+      font-weight: 700;
+    }
+    .val-false {
+      color: var(--coral);
+      font-weight: 700;
+    }
+
+    /* History & Culture Note (Em có biết) */
+    .did-you-know {
+      background: linear-gradient(135deg, rgba(244, 63, 94, 0.06), rgba(168, 85, 247, 0.06));
+      border: 1px solid rgba(244, 63, 94, 0.2);
+      border-radius: 12px;
+      padding: 18px 22px;
+      margin: 30px 0;
+    }
+    .dyk-title {
+      font-weight: 700;
+      color: #f43f5e;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    /* Interactive Solution Dropdown */
+    details.exercise-hint {
+      margin-top: 10px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 10px 14px;
+    }
+    details.exercise-hint summary {
+      font-weight: 600;
+      color: var(--accent);
+      cursor: pointer;
+      user-select: none;
+    }
+    details.exercise-hint[open] summary {
+      margin-bottom: 8px;
+    }
+    .hint-content {
+      font-size: 14.5px;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* Footer Navigation */
+    .sgk-footer {
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid var(--card-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .btn-nav {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .btn-nav:hover {
+      border-color: var(--accent);
+      background: var(--accent-glow);
+      color: var(--accent);
+    }
+    .btn-nav.primary {
+      background: linear-gradient(135deg, #0284c7, #38bdf8);
+      color: #090d16;
+      border: none;
+      font-weight: 700;
+    }
+    .btn-nav.primary:hover {
+      box-shadow: 0 0 18px rgba(56, 189, 248, 0.4);
+    }
+
+    @media (max-width: 900px) {
+      .sgk-sidebar {
+        display: none;
+      }
+      .sgk-main {
+        padding: 24px 20px;
+      }
+    }
+  </style>
+</head>
+<body class="theme-dark">
+
+<div class="sgk-wrapper">
+  <!-- LEFT DESKTOP SIDEBAR -->
+  <aside class="sgk-sidebar">
+    <div class="book-meta">
+      <span class="book-badge">SGK Điện tử</span>
+      <div class="book-title">Toán 10 — Tập 1</div>
+      <div style="font-size: 12px; color: var(--text-muted); margin-top: 3px;">Kết nối tri thức với cuộc sống</div>
+    </div>
+
+    <div class="toc-title">Mục lục bài học</div>
+    <ul class="toc-list" id="tocList">
+      <li class="toc-item active"><a href="#muc-tieu">🎯 Mục tiêu cần đạt</a></li>
+      <li class="toc-item"><a href="#khoi-dong">🚀 Khởi động</a></li>
+      <li class="toc-item"><a href="#phan-1">1. Mệnh đề, mệnh đề chứa biến</a></li>
+      <li class="toc-item"><a href="#phan-2">2. Mệnh đề phủ định</a></li>
+      <li class="toc-item"><a href="#phan-3">3. Mệnh đề kéo theo & đảo</a></li>
+      <li class="toc-item"><a href="#phan-4">4. Mệnh đề tương đương</a></li>
+      <li class="toc-item"><a href="#phan-5">5. Kí hiệu với mọi (∀) & tồn tại (∃)</a></li>
+      <li class="toc-item"><a href="#bai-tap">📝 Bài tập sách giáo khoa</a></li>
+      <li class="toc-item"><a href="#em-co-biet">💡 Em có biết: Lịch sử Logic</a></li>
+    </ul>
+
+    <div class="screen-controls">
+      <div class="control-row">
+        <span>Cỡ chữ:</span>
+        <div class="btn-group">
+          <button class="btn-mini" onclick="adjustFont(-1)" title="Giảm cỡ chữ">A-</button>
+          <button class="btn-mini" onclick="resetFont()" title="Cỡ mặc định">100%</button>
+          <button class="btn-mini" onclick="adjustFont(1)" title="Tăng cỡ chữ">A+</button>
+        </div>
+      </div>
+      <div class="control-row">
+        <span>Giao diện đọc:</span>
+        <div class="btn-group">
+          <button class="btn-mini" onclick="setTheme('theme-dark')" title="Chế độ Tối">🌙 Tối</button>
+          <button class="btn-mini" onclick="setTheme('theme-sepia')" title="Chế độ Giấy">📜 Giấy</button>
+          <button class="btn-mini" onclick="setTheme('theme-light')" title="Chế độ Sáng">☀️ Sáng</button>
+        </div>
+      </div>
+      <div style="font-size: 11px; color: var(--text-muted); text-align: center; margin-top: 4px;">
+        🏫 THPT Phục Hòa — Tổ Tự nhiên
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN READING CANVAS -->
+  <main class="sgk-main">
+    <div class="sgk-header">
+      <div class="breadcrumb">
+        <span>Toán học 10</span>
+        <span>›</span>
+        <span>Chương I. Mệnh đề và tập hợp</span>
+        <span>›</span>
+        <span style="color: var(--text);">Bài 1</span>
+      </div>
+      <div class="lesson-tag">📖 Chương I • Trang 5 - 11 SGK</div>
+      <h1 class="lesson-title">BÀI 1. MỆNH ĐỀ</h1>
+      <div class="lesson-meta-bar">
+        <div class="meta-chip">⏱ Thời lượng: 2 tiết lí thuyết</div>
+        <div class="meta-chip">🎯 5 Đơn vị kiến thức cốt lõi</div>
+        <div class="meta-chip">💡 Bảng chân trị & Kí hiệu ∀, ∃</div>
+      </div>
+    </div>
+
+    <!-- MỤC TIÊU CẦN ĐẠT -->
+    <div class="objective-box" id="muc-tieu">
+      <div class="obj-title">🎯 Học xong bài này, em sẽ:</div>
+      <ul class="obj-list">
+        <li>Nhận biết được thế nào là một mệnh đề toán học, mệnh đề chứa biến.</li>
+        <li>Biết cách phủ định một mệnh đề và xác định tính đúng/sai của mệnh đề phủ định.</li>
+        <li>Thiết lập được mệnh đề kéo theo (P ⇒ Q), mệnh đề đảo (Q ⇒ P) và phân biệt điều kiện cần, điều kiện đủ.</li>
+        <li>Hiểu và sử dụng thành thạo mệnh đề tương đương (P ⇔ Q) và định lí toán học.</li>
+        <li>Sử dụng đúng các kí hiệu phổ dụng: "Với mọi" (∀) và "Tồn tại" (∃) trong các bài toán đại số và hình học.</li>
+      </ul>
+    </div>
+
+    <!-- KHỞI ĐỘNG -->
+    <div class="sgk-section" id="khoi-dong">
+      <h2 class="section-heading"><span class="section-num">🚀</span> Khởi động</h2>
+      <p>Trong cuộc sống hàng ngày, chúng ta thường đưa ra nhiều câu khẳng định, ví dụ như:</p>
+      <div style="background: rgba(255,255,255,0.03); border-radius: 8px; padding: 14px 18px; margin-bottom: 14px;">
+        <p>• Bạn An nói: <em>"Thác Bản Giốc thuộc tỉnh Cao Bằng."</em></p>
+        <p>• Bạn Bình nói: <em>"Số 15 là số nguyên tố."</em></p>
+        <p>• Bạn Chi thốt lên: <em>"Thời tiết hôm nay đẹp quá!"</em></p>
+        <p style="margin-bottom:0;">• Bạn Dũng hỏi: <em>"Mấy giờ rồi các bạn?"</em></p>
+      </div>
+      <p>Trong các câu trên, câu của bạn An và bạn Bình có thể xác định rõ ràng là <strong>đúng</strong> hay <strong>sai</strong>. Nhưng câu của bạn Chi chỉ là cảm thán chủ quan, còn câu của bạn Dũng là một câu hỏi không khẳng định tính đúng sai. Trong Toán học, những khẳng định có tính đúng sai rõ ràng được gọi là <strong>mệnh đề</strong>.</p>
+    </div>
+
+    <!-- PHẦN 1: MỆNH ĐỀ -->
+    <div class="sgk-section" id="phan-1">
+      <h2 class="section-heading"><span class="section-num">1</span> Mệnh đề, mệnh đề chứa biến</h2>
+      
+      <div class="math-box">
+        <div class="math-box-title">📌 Khái niệm Mệnh đề</div>
+        <p>• <strong>Mệnh đề</strong> (hay mệnh đề logic) là một khẳng định đúng hoặc một khẳng định sai.</p>
+        <p>• Một mệnh đề không thể vừa đúng, vừa sai.</p>
+        <p style="margin-bottom:0;">• Những câu cảm thán, câu hỏi, câu cầu khiến không phải là mệnh đề.</p>
+      </div>
+
+      <div class="example-box">
+        <div class="example-title">Ví dụ 1 (SGK Trang 6)</div>
+        <p>Xét tính đúng sai của các câu sau:</p>
+        <p>a) "2026 chia hết cho 2."</p>
+        <p>b) "Số π lớn hơn 3,14 và nhỏ hơn 3,15."</p>
+        <p>c) "Tam giác có ba góc bằng nhau là tam giác vuông."</p>
+        <div class="example-solution">
+          <span class="sol-tag">Lời giải:</span>
+          <p>a) Đây là một mệnh đề <strong>ĐÚNG</strong> (vì 2026 tận cùng là chữ số chẵn 6).</p>
+          <p>b) Đây là một mệnh đề <strong>ĐÚNG</strong> (vì π ≈ 3,14159...).</p>
+          <p style="margin-bottom:0;">c) Đây là một mệnh đề <strong>SAI</strong> (vì tam giác có 3 góc bằng nhau là tam giác đều, mỗi góc bằng 60°).</p>
+        </div>
+      </div>
+
+      <h3 class="sub-heading">Mệnh đề chứa biến</h3>
+      <p>Xét câu: <em>"P(n): 2n + 1 là số lẻ"</em> hoặc <em>"Q(x): x > 3"</em>. Khi chưa cho giá trị cụ thể của n hoặc x, ta chưa thể biết câu đó đúng hay sai. Những câu như vậy được gọi là <strong>mệnh đề chứa biến</strong>.</p>
+      <div class="math-box highlight">
+        <div class="math-box-title">💡 Ghi nhớ</div>
+        <p style="margin-bottom:0;">Mệnh đề chứa biến trở thành mệnh đề thông thường (xác định được đúng/sai) khi ta thay biến bằng một giá trị cụ thể thuộc tập xác định của nó.</p>
+      </div>
+    </div>
+
+    <!-- PHẦN 2: MỆNH ĐỀ PHỦ ĐỊNH -->
+    <div class="sgk-section" id="phan-2">
+      <h2 class="section-heading"><span class="section-num">2</span> Mệnh đề phủ định</h2>
+      <p>Cho mệnh đề P. Mệnh đề <em>"Không phải P"</em> được gọi là <strong>mệnh đề phủ định</strong> của P và kí hiệu là <strong>P̄</strong> (đọc là P ngang).</p>
+
+      <div class="math-box">
+        <div class="math-box-title"> Quy tắc tính đúng sai của mệnh đề phủ định</div>
+        <p>• Nếu P đúng thì P̄ sai.</p>
+        <p style="margin-bottom:0;">• Nếu P sai thì P̄ đúng.</p>
+      </div>
+
+      <div class="truth-table-wrap">
+        <table class="truth-table">
+          <thead>
+            <tr>
+              <th>Mệnh đề P</th>
+              <th>Mệnh đề phủ định P̄</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="val-true">Đúng (True - Đ)</td>
+              <td class="val-false">Sai (False - S)</td>
+            </tr>
+            <tr>
+              <td class="val-false">Sai (False - S)</td>
+              <td class="val-true">Đúng (True - Đ)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="activity-box">
+        <div class="activity-label">✏️ Luyện tập 2 (SGK Trang 7)</div>
+        <p>Phát biểu mệnh đề phủ định của mệnh đề P: <em>"11 là số nguyên tố"</em> và xét tính đúng sai của mệnh đề phủ định đó.</p>
+        <details class="exercise-hint">
+          <summary>Xem gợi ý lời giải</summary>
+          <div class="hint-content">
+            <p>Mệnh đề phủ định P̄ là: <em>"11 không phải là số nguyên tố"</em>.</p>
+            <p>Vì mệnh đề P đúng, nên mệnh đề phủ định P̄ là một mệnh đề <strong>SAI</strong>.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- PHẦN 3: MỆNH ĐỀ KÉO THEO VÀ ĐẢO -->
+    <div class="sgk-section" id="phan-3">
+      <h2 class="section-heading"><span class="section-num">3</span> Mệnh đề kéo theo và mệnh đề đảo</h2>
+      <p>Cho hai mệnh đề P và Q. Mệnh đề <em>"Nếu P thì Q"</em> được gọi là <strong>mệnh đề kéo theo</strong>, kí hiệu là <strong>P ⇒ Q</strong>.</p>
+
+      <div class="math-box">
+        <div class="math-box-title">⚡ Chân trị của mệnh đề kéo theo P ⇒ Q</div>
+        <p>Mệnh đề P ⇒ Q chỉ sai khi <strong>P đúng mà Q sai</strong>. Trong tất cả các trường hợp còn lại, P ⇒ Q đều đúng!</p>
+        <span class="math-formula">P ⇒ Q : Sai ⟺ (P Đúng và Q Sai)</span>
+      </div>
+
+      <div class="truth-table-wrap">
+        <table class="truth-table">
+          <thead>
+            <tr>
+              <th>P</th>
+              <th>Q</th>
+              <th>P ⇒ Q</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="val-true">Đúng</td>
+              <td class="val-true">Đúng</td>
+              <td class="val-true">Đúng</td>
+            </tr>
+            <tr>
+              <td class="val-true">Đúng</td>
+              <td class="val-false">Sai</td>
+              <td class="val-false">Sai ⚠️</td>
+            </tr>
+            <tr>
+              <td class="val-false">Sai</td>
+              <td class="val-true">Đúng</td>
+              <td class="val-true">Đúng</td>
+            </tr>
+            <tr>
+              <td class="val-false">Sai</td>
+              <td class="val-false">Sai</td>
+              <td class="val-true">Đúng</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="sub-heading">Điều kiện cần và Điều kiện đủ trong Toán học</h3>
+      <p>Khi mệnh đề P ⇒ Q là một định lí toán học, ta nói:</p>
+      <ul style="padding-left: 20px; margin-bottom: 14px;">
+        <li><strong>P</strong> là <em>giả thiết</em>, <strong>Q</strong> là <em>kết luận</em> của định lí.</li>
+        <li><strong>P</strong> là <strong>điều kiện đủ</strong> để có Q.</li>
+        <li><strong>Q</strong> là <strong>điều kiện cần</strong> để có P.</li>
+      </ul>
+
+      <h3 class="sub-heading">Mệnh đề đảo</h3>
+      <p>Cho mệnh đề kéo theo P ⇒ Q. Mệnh đề <strong>Q ⇒ P</strong> được gọi là <strong>mệnh đề đảo</strong> của P ⇒ Q.</p>
+      <p><em>Lưu ý quan trọng:</em> Mệnh đề đảo của một mệnh đề đúng không nhất thiết phải đúng!</p>
+    </div>
+
+    <!-- PHẦN 4: MỆNH ĐỀ TƯƠNG ĐƯƠNG -->
+    <div class="sgk-section" id="phan-4">
+      <h2 class="section-heading"><span class="section-num">4</span> Mệnh đề tương đương</h2>
+      <p>Cho hai mệnh đề P và Q. Mệnh đề <em>"P nếu và chỉ nếu Q"</em> (hoặc <em>"P khi và chỉ khi Q"</em>) được gọi là <strong>mệnh đề tương đương</strong>, kí hiệu là <strong>P ⇔ Q</strong>.</p>
+      
+      <div class="math-box highlight">
+        <div class="math-box-title"> Quy tắc chân trị tương đương</div>
+        <p>Mệnh đề P ⇔ Q <strong>đúng</strong> khi và chỉ khi cả hai mệnh đề P và Q có <strong>cùng giá trị chân trị</strong> (cùng đúng hoặc cùng sai).</p>
+        <span class="math-formula">P ⇔ Q Đúng ⟺ (P và Q cùng Đ) hoặc (P và Q cùng S)</span>
+      </div>
+
+      <p>Khi P ⇔ Q là một định lí, ta nói: <em>"P là điều kiện cần và đủ để có Q"</em> (hoặc ngược lại).</p>
+    </div>
+
+    <!-- PHẦN 5: KÍ HIỆU VỚI MỌI VÀ TỒN TẠI -->
+    <div class="sgk-section" id="phan-5">
+      <h2 class="section-heading"><span class="section-num">5</span> Kí hiệu ∀ (với mọi) và ∃ (tồn tại)</h2>
+      
+      <p>Trong toán học, để diễn đạt tính phổ quát hoặc sự tồn tại của các đối tượng, ta dùng hai kí hiệu đặc biệt:</p>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0;">
+        <div class="math-box" style="margin:0;">
+          <div class="math-box-title" style="color: var(--accent);">∀ : Với mọi</div>
+          <p style="font-size: 14px;">Kí hiệu: ∀x ∈ X, P(x)</p>
+          <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom:0;">Đúng khi P(x) đúng với <em>toàn bộ</em> các phần tử x thuộc X.</p>
+        </div>
+        <div class="math-box" style="margin:0;">
+          <div class="math-box-title" style="color: var(--coral);">∃ : Tồn tại (có ít nhất một)</div>
+          <p style="font-size: 14px;">Kí hiệu: ∃x ∈ X, P(x)</p>
+          <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom:0;">Đúng khi chỉ ra được <em>ít nhất một</em> phần tử x₀ thuộc X làm cho P(x₀) đúng.</p>
+        </div>
+      </div>
+
+      <h3 class="sub-heading">Quy tắc phủ định mệnh đề chứa ∀ và ∃</h3>
+      <div class="math-box highlight">
+        <div class="math-box-title">⚡ Bẫy thường gặp trong các đề thi THPT!</div>
+        <p>• Phủ định của <em>"∀x ∈ X, P(x)"</em> là <strong>"∃x ∈ X, P̄(x)"</strong></p>
+        <p style="margin-bottom:0;">• Phủ định của <em>"∃x ∈ X, P(x)"</em> là <strong>"∀x ∈ X, P̄(x)"</strong></p>
+      </div>
+
+      <div class="example-box">
+        <div class="example-title">Ví dụ phủ định</div>
+        <p>Tìm phủ định của mệnh đề: <em>"Mọi số thực x đều có x² ≥ 0"</em>.</p>
+        <div class="example-solution">
+          <span class="sol-tag">Lời giải:</span>
+          <p>Mệnh đề đã cho viết dưới dạng kí hiệu là: ∀x ∈ ℝ, x² ≥ 0.</p>
+          <p style="margin-bottom:0;">Phủ định của nó là: <strong>∃x ∈ ℝ, x² &lt; 0</strong> (Tồn tại số thực x sao cho x² &lt; 0).</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- BÀI TẬP SGK -->
+    <div class="sgk-section" id="bai-tap">
+      <h2 class="section-heading"><span class="section-num">📝</span> Bài tập sách giáo khoa (Trang 11)</h2>
+
+      <div class="activity-box">
+        <p><strong>Bài 1.1:</strong> Trong các câu sau, câu nào là mệnh đề?</p>
+        <p>a) Trung Quốc là nước đông dân nhất thế giới.</p>
+        <p>b) Bạn học trường nào?</p>
+        <p>c) Không được làm việc riêng trong giờ học.</p>
+        <p>d) Tôi sẽ sút bóng trúng xà ngang.</p>
+        <details class="exercise-hint">
+          <summary>Xem hướng dẫn giải Bài 1.1</summary>
+          <div class="hint-content">
+            <p>• Câu a) là một <strong>mệnh đề</strong> (khẳng định có tính đúng sai xác định).</p>
+            <p>• Câu b) là câu hỏi, không phải mệnh đề.</p>
+            <p>• Câu c) là câu mệnh lệnh (cầu khiến), không phải mệnh đề.</p>
+            <p>• Câu d) là lời dự đoán tương lai mang tính bất định, không phải mệnh đề logic toán học.</p>
+          </div>
+        </details>
+      </div>
+
+      <div class="activity-box">
+        <p><strong>Bài 1.4:</strong> Phát biểu mệnh đề đảo của mệnh đề sau và xét tính đúng sai của nó: <em>"Nếu tam giác ABC là tam giác đều thì tam giác ABC là tam giác cân."</em></p>
+        <details class="exercise-hint">
+          <summary>Xem hướng dẫn giải Bài 1.4</summary>
+          <div class="hint-content">
+            <p>• <strong>Mệnh đề đảo:</strong> <em>"Nếu tam giác ABC là tam giác cân thì tam giác ABC là tam giác đều."</em></p>
+            <p>• <strong>Tính đúng sai:</strong> Mệnh đề đảo này là <strong>SAI</strong> (ví dụ tam giác có các cạnh 3, 3, 4 là tam giác cân nhưng không đều).</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <!-- EM CÓ BIẾT -->
+    <div class="did-you-know" id="em-co-biet">
+      <div class="dyk-title">💡 Em có biết: Lịch sử logic toán học</div>
+      <p>Logic học hình thức ra đời từ thời Hy Lạp cổ đại với triết gia vĩ đại <strong>Aristotle (384–322 TCN)</strong>, người đầu tiên hệ thống hóa các tam đoạn luận suy luận. Đến thế kỉ 19, nhà toán học người Anh <strong>George Boole (1815–1864)</strong> đã đại số hóa logic thành Đại số Boole (Boolean algebra), nền tảng cho toàn bộ mạch điện tử, máy tính và khoa học máy tính ngày nay.</p>
+    </div>
+
+    <!-- FOOTER NAV -->
+    <div class="sgk-footer">
+      <a href="/luyen/bai-01" class="btn-nav">
+        <span>←</span> Về trang Luyện tập Bài 1
+      </a>
+      <a href="/luyen/bai-01?tab=quiz" class="btn-nav primary">
+        Làm Trắc nghiệm 15 câu <span>🚀</span>
+      </a>
+    </div>
+  </main>
+</div>
+
+<script>
+  let currentScale = 16;
+  function adjustFont(delta) {
+    currentScale = Math.max(13, Math.min(24, currentScale + delta));
+    document.documentElement.style.setProperty('--font-scale', currentScale + 'px');
+  }
+  function resetFont() {
+    currentScale = 16;
+    document.documentElement.style.setProperty('--font-scale', '16px');
+  }
+
+  function setTheme(themeName) {
+    document.body.classList.remove('theme-dark', 'theme-light', 'theme-sepia');
+    document.body.classList.add(themeName);
+  }
+
+  // Active TOC on scroll
+  const sections = document.querySelectorAll('.sgk-section, .objective-box, .did-you-know');
+  const tocItems = document.querySelectorAll('.toc-item');
+
+  window.addEventListener('scroll', () => {
+    let currentId = '';
+    const scrollPos = window.scrollY + 100;
+    sections.forEach(sec => {
+      const top = sec.offsetTop;
+      const height = sec.offsetHeight;
+      if (scrollPos >= top && scrollPos < top + height) {
+        currentId = sec.getAttribute('id');
+      }
+    });
+
+    if (currentId) {
+      tocItems.forEach(item => {
+        const a = item.querySelector('a');
+        if (a && a.getAttribute('href') === '#' + currentId) {
+          item.classList.add('active');
+        } else {
+          item.classList.remove('active');
+        }
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
